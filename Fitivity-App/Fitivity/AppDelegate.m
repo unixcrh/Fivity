@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
+    [self.window setAutoresizesSubviews:YES];
+    
 	//Initialize the first two view controllers
 	self.openingView = [[OpeningLogoViewController alloc] initWithNibName:@"OpeningLogoViewController" bundle:nil];
 	self.streamView = [[StreamViewController alloc] initWithNibName:@"StreamViewController" bundle:nil];

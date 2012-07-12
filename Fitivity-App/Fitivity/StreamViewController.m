@@ -3,7 +3,7 @@
 //  Fitivity
 //
 //  Created by Nathaniel Doe on 7/11/12.
-//  Copyright (c) 2012 Nathaniel Doe. All rights reserved.
+//  Copyright (c) 2012 Fitivity. All rights reserved.
 //
 
 #import "StreamViewController.h"
@@ -34,13 +34,13 @@
  @result a boolean indicating whether the log in should proceed.
  */
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
-	return NO;
+	return YES;
 }
 
 /*! @name Responding to Actions */
 /// Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 	[logInController dismissModalViewControllerAnimated:YES];
 }
 
@@ -98,7 +98,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.navigationItem.title = @"Fitivity";
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     }
     return self;
 }
@@ -106,13 +107,16 @@
 - (void)viewDidAppear:(BOOL)animated {
     if ([PFUser currentUser] == nil) {
         [self login];
+    } 
+    else {
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarAnimationNone animated:YES];
+    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight];
 }
 
 - (void)viewDidUnload {

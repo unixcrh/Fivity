@@ -8,6 +8,10 @@
 
 #import "LoginViewController.h"
 
+#define kFieldBuffer        10
+#define kButtonBuffer       5
+#define kButtonDiff         4
+
 @interface LoginViewController ()
 
 @end
@@ -24,18 +28,33 @@
     return self;
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    //Set the positioning of each item 
+    CGRect tempframe;
+    self.logInView.logo.frame = CGRectMake(0, 0, 320, 100);
+    
+    tempframe = self.logInView.passwordField.frame;
+    self.logInView.passwordField.frame = CGRectMake(tempframe.origin.x, tempframe.origin.y + kFieldBuffer, tempframe.size.width, tempframe.size.height);
+    
+    tempframe = self.logInView.logInButton.frame;
+    self.logInView.logInButton.frame = CGRectMake(tempframe.origin.x, tempframe.origin.y + kFieldBuffer, (tempframe.size.width/2)-kButtonDiff, tempframe.size.height);
+    self.logInView.signUpButton.frame = CGRectMake(tempframe.origin.x + tempframe.size.width/2 + kButtonBuffer, tempframe.origin.y + kFieldBuffer, (tempframe.size.width/2)-kButtonDiff, tempframe.size.height);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	    
     //Update the logo
-	UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FitivityLogo.png"]];
-    logoImage.frame = CGRectMake(0, 0, 320, 100);
-	self.logInView.logo = logoImage;
-	self.signUpController.signUpView.logo = logoImage;
+	self.logInView.logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FitivityLogo.png"]];
+	self.signUpController.signUpView.logo = self.logInView.logo;
     
     //Set the backgrounds
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
 	self.signUpController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    
+    //Hide any unncessary labels
     
     //Get references to the text fields 
     UITextField *userName = self.logInView.usernameField;
