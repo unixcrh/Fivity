@@ -40,6 +40,7 @@
 /*! @name Responding to Actions */
 /// Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 	[logInController dismissModalViewControllerAnimated:YES];
 }
 
@@ -60,6 +61,7 @@
 		if (!loginView) {
 			loginView = [[LoginViewController alloc] init];
 			loginView.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton | PFLogInFieldsLogInButton | PFLogInFieldsFacebook;
+            loginView.facebookPermissions = [NSArray arrayWithObjects:@"publish_stream", nil];
 			[loginView setDelegate:self];
 		}
 		[self presentModalViewController:loginView animated:YES];
@@ -102,13 +104,15 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-	[self login];
+    if ([PFUser currentUser] == nil) {
+        [self login];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	openingViewShowing = true;
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarAnimationNone animated:YES];
 }
 
 - (void)viewDidUnload {

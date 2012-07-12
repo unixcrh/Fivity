@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
+		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
 		6CA2690015AE2A1400CD205C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A75115ACFD4300C0FF75 /* Reachability.m */; };
 		6CA2690515AE2A5200CD205C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2690415AE2A5200CD205C /* SystemConfiguration.framework */; };
 		6CA2691515AE2D2B00CD205C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2691415AE2D2B00CD205C /* AudioToolbox.framework */; };
@@ -26,13 +28,13 @@
 		6CB1A75615ACFF7800C0FF75 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A75415ACFF7800C0FF75 /* background@2x.png */; };
 		6CB1A75A15ACFFBC00C0FF75 /* OpeningLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */; };
 		6CB1A75B15ACFFBC00C0FF75 /* OpeningLogoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */; };
-		6CB1A75E15AD004800C0FF75 /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A75D15AD004800C0FF75 /* FitivityLogo.png */; };
 		6CB1A78015AD057900C0FF75 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A77E15AD057900C0FF75 /* LoginViewController.m */; };
-		6CB1A78115AD057900C0FF75 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A77F15AD057900C0FF75 /* LoginViewController.xib */; };
 		6CB1A78315AD067000C0FF75 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1A78215AD067000C0FF75 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
+		57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6CA2690415AE2A5200CD205C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6CA2691415AE2D2B00CD205C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6CA2691615AE2D7A00CD205C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -60,10 +62,8 @@
 		6CB1A75715ACFFBC00C0FF75 /* OpeningLogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningLogoViewController.h; sourceTree = "<group>"; };
 		6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningLogoViewController.m; sourceTree = "<group>"; };
 		6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpeningLogoViewController.xib; path = Fitivity/OpeningLogoViewController.xib; sourceTree = "<group>"; };
-		6CB1A75D15AD004800C0FF75 /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
 		6CB1A77D15AD057900C0FF75 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6CB1A77E15AD057900C0FF75 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		6CB1A77F15AD057900C0FF75 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Fitivity/LoginViewController.xib; sourceTree = "<group>"; };
 		6CB1A78215AD067000C0FF75 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */,
 				6CA2691B15AE2E1200CD205C /* Security.framework in Frameworks */,
 				6CA2691915AE2DEB00CD205C /* MobileCoreServices.framework in Frameworks */,
 				6CA2691715AE2D7A00CD205C /* CFNetwork.framework in Frameworks */,
@@ -131,6 +132,7 @@
 		6CB1A72415ACFC1D00C0FF75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */,
 				6CA2691A15AE2E1200CD205C /* Security.framework */,
 				6CA2691815AE2DEB00CD205C /* MobileCoreServices.framework */,
 				6CA2691615AE2D7A00CD205C /* CFNetwork.framework */,
@@ -183,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */,
-				6CB1A77F15AD057900C0FF75 /* LoginViewController.xib */,
 				6CA2691E15AE2FB900CD205C /* StreamViewController.xib */,
 			);
 			name = "Interface Files";
@@ -210,7 +211,7 @@
 		6CB1A75C15AD004000C0FF75 /* Logos */ = {
 			isa = PBXGroup;
 			children = (
-				6CB1A75D15AD004800C0FF75 /* FitivityLogo.png */,
+				57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */,
 			);
 			name = Logos;
 			sourceTree = "<group>";
@@ -270,9 +271,8 @@
 				6CB1A75515ACFF7800C0FF75 /* background.png in Resources */,
 				6CB1A75615ACFF7800C0FF75 /* background@2x.png in Resources */,
 				6CB1A75B15ACFFBC00C0FF75 /* OpeningLogoViewController.xib in Resources */,
-				6CB1A75E15AD004800C0FF75 /* FitivityLogo.png in Resources */,
-				6CB1A78115AD057900C0FF75 /* LoginViewController.xib in Resources */,
 				6CA2692015AE2FBA00CD205C /* StreamViewController.xib in Resources */,
+				57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

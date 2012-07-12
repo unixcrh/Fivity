@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
+
 #import "OpeningLogoViewController.h"
 
 @interface LoginViewController : PFLogInViewController

@@ -14,7 +14,6 @@
 @class LoginViewController;
 
 @interface StreamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, PFLogInViewControllerDelegate, OpeningLogoViewControllerDelegate> {
-	BOOL openingViewShowing;
 }
 
 @property (nonatomic, retain) LoginViewController *loginView;
