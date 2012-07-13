@@ -29,6 +29,7 @@
 
 - (IBAction)signUp:(id)sender {
 	SignUpViewController *signUpView = [[SignUpViewController alloc] initWithNibName:@"SignUpViewController" bundle:nil];
+    [signUpView setDelegate:self];
 	[self presentModalViewController:signUpView animated:YES];
 }
 
@@ -82,8 +83,22 @@
     [passwordField resignFirstResponder];
 }
 
+#pragma mark - SignUpViewController Delegate
+
+//User canceled the signup process. Don't want to let them move on 
+//until they sign up/in
+-(void)userCancledSignUp:(SignUpViewController *)view {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+//User successfully signed up, log them in and then load discover screen
+-(void)userSignedUpSuccessfully:(SignUpViewController *)view {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 #pragma mark - UITextField Delegate 
 
+//Move the text fields up so that the keyboard does not cover them
 - (void) animateTextField:(UITextField*)textField Up:(BOOL)up {
     
     int movement = (up ? -kTextFieldMoveDistance : kTextFieldMoveDistance);

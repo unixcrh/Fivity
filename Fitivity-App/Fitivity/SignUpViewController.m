@@ -16,12 +16,21 @@
 @end
 
 @implementation SignUpViewController
+
+@synthesize delegate;
 @synthesize nameField;
 @synthesize userNameField;
 @synthesize passwordField;
 @synthesize reenterPasswordField;
 @synthesize finishedButton;
 @synthesize resignButton;
+
+#pragma mark - Helper Methods
+
+//Make sure that the user information entered is valid
+- (BOOL)inputIsValid {
+    return YES;
+}
 
 #pragma mark - IBActions
 
@@ -32,8 +41,23 @@
     [nameField resignFirstResponder];
 }
 
+- (IBAction)cancelSignUp:(id)sender {
+    [delegate userCancledSignUp:self];
+}
+
+- (IBAction)attemptSignUp:(id)sender {
+    if ([self inputIsValid]) {
+        [delegate userSignedUpSuccessfully:self];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sign Up Error" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
 #pragma mark - UITextField Delegate 
 
+//Move the text fields up so that the keyboard does not cover them
 - (void) animateTextField:(UITextField*)textField Up:(BOOL)up {
     
     int movement = (up ? -kTextFieldMoveDistance : kTextFieldMoveDistance);

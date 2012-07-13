@@ -8,15 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignUpViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
+@protocol SignUpViewControllerDelegate;
+
+@interface SignUpViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate> {
+    NSString *errorMessage;
+}
 
 - (IBAction)resignSignUp:(id)sender;
+- (IBAction)cancelSignUp:(id)sender;
+- (IBAction)attemptSignUp:(id)sender;
 
+@property (nonatomic, assign) id<SignUpViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *reenterPasswordField;
 @property (weak, nonatomic) IBOutlet UIButton *finishedButton;
 @property (weak, nonatomic) IBOutlet UIButton *resignButton;
+
+@end
+
+@protocol SignUpViewControllerDelegate <NSObject>
+
+-(void)userCancledSignUp:(SignUpViewController *)view;
+-(void)userSignedUpSuccessfully:(SignUpViewController *)view;
 
 @end

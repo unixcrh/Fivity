@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
+#import "SignUpViewController.h"
+
+@interface LoginViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate, SignUpViewControllerDelegate>
 
 - (IBAction)signUp:(id)sender;
 - (IBAction)signIn:(id)sender;
