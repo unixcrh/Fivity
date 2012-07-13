@@ -23,6 +23,7 @@
 @synthesize signUpButton;
 @synthesize signInButton;
 @synthesize facebookSignUpButton;
+@synthesize resignButton;
 
 #pragma mark - IBActions
 
@@ -76,6 +77,11 @@
 	}
 }
 
+- (IBAction)resignSignIn:(id)sender {
+    [userNameField resignFirstResponder];
+    [passwordField resignFirstResponder];
+}
+
 #pragma mark - UITextField Delegate 
 
 - (void) animateTextField:(UITextField*)textField Up:(BOOL)up {
@@ -127,6 +133,7 @@
 	[self setSignUpButton:nil];
 	[self setSignInButton:nil];
 	[self setFacebookSignUpButton:nil];
+    [self setResignButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

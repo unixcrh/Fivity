@@ -14,11 +14,13 @@
 - (IBAction)signUp:(id)sender;
 - (IBAction)signIn:(id)sender;
 - (IBAction)signInWithFacebook:(id)sender;
+- (IBAction)resignSignIn:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UIButton *facebookSignUpButton;
+@property (weak, nonatomic) IBOutlet UIButton *resignButton;
 
 @end

@@ -8,6 +8,9 @@
 
 #import "SignUpViewController.h"
 
+#define kTextFieldMoveDistance          100
+#define kTextFieldAnimationDuration    0.3f
+
 @interface SignUpViewController ()
 
 @end
@@ -18,6 +21,44 @@
 @synthesize passwordField;
 @synthesize reenterPasswordField;
 @synthesize finishedButton;
+@synthesize resignButton;
+
+#pragma mark - IBActions
+
+- (IBAction)resignSignUp:(id)sender {
+    [userNameField resignFirstResponder];
+    [passwordField resignFirstResponder];
+    [reenterPasswordField resignFirstResponder];
+    [nameField resignFirstResponder];
+}
+
+#pragma mark - UITextField Delegate 
+
+- (void) animateTextField:(UITextField*)textField Up:(BOOL)up {
+    
+    int movement = (up ? -kTextFieldMoveDistance : kTextFieldMoveDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: kTextFieldAnimationDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[textField resignFirstResponder];
+	return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+	[self animateTextField:textField Up:YES];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+	[self animateTextField:textField Up:NO];
+}
+
+#pragma mark - view lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,6 +80,7 @@
     [self setPasswordField:nil];
     [self setReenterPasswordField:nil];
     [self setFinishedButton:nil];
+    [self setResignButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

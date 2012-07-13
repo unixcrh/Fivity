@@ -10,10 +10,13 @@
 
 @interface SignUpViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
+- (IBAction)resignSignUp:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *reenterPasswordField;
 @property (weak, nonatomic) IBOutlet UIButton *finishedButton;
+@property (weak, nonatomic) IBOutlet UIButton *resignButton;
 
 @end
