@@ -15,6 +15,7 @@
 @synthesize window = _window;
 @synthesize openingView = _openingView;
 @synthesize streamView = _streamView;
+@synthesize tabBarController = _tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -26,10 +27,13 @@
 	
 	[self.openingView setDelegate:self.streamView];
 	
+	//Configure the Navigation Bar Controller
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.streamView];
-	self.window.rootViewController = navController;
-	self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+	[navController.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackplate"] forBarMetrics:UIBarMetricsDefault];
+	
+	//Configure the Tab Bar Controller
+	self.tabBarController = [[UITabBarController alloc] init];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController, nil];
 	
 	//Set up parse credentials 
 	[Parse setApplicationId:[[FConfig instance] getParseAppID] clientKey:[[FConfig instance] getParseClientKey]];
@@ -37,6 +41,10 @@
 	
 	//Present the opening view
 	[self.streamView presentModalViewController:self.openingView animated:NO];
+	
+	self.window.rootViewController = self.tabBarController;
+	self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 	
     return YES;
 }

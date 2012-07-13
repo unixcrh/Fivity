@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "NSError+FITParseUtilities.h"
 
 @interface LoginViewController ()
 
@@ -28,9 +29,48 @@
 }
 
 - (IBAction)signIn:(id)sender {
+	@synchronized(self) {
+		NSString *username = [self.userNameField text];
+		NSString *password = [self.passwordField text];
+		if (username && password) {
+			if ([username length] > 0 && [password length] > 0) {
+				[PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
+					if (error || !user) {
+						NSString *errorMessage = @"Could not login due to unknown error.";
+						if (error) {
+							errorMessage = [error userFriendlyParseErrorDescription:YES];
+						}
+						UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Error" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+						[alert show];
+					}
+					else {
+						//Logged in successfully 
+						[self dismissModalViewControllerAnimated:YES];
+					}
+				}];
+			}
+		}
+	}
 }
 
 - (IBAction)signInWithFacebook:(id)sender {
+	@synchronized(self) {
+		[PFFacebookUtils logInWithPermissions:[[NSArray alloc] init] block:^(PFUser *user, NSError *error){
+			if (error || !user) {
+				NSString *errorMessage = @"Couldn't login due to unknown error.";
+				if (error) {
+					errorMessage = [error userFriendlyParseErrorDescription:YES];
+				}
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Error" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			[alert show];
+			}
+		 else {
+			 //Logged in successfully 
+			 [self dismissModalViewControllerAnimated:YES];
+		 }
+		}];
+
+	}
 }
 
 #pragma mark - UITextField Delegate 

@@ -16,5 +16,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) OpeningLogoViewController *openingView;
 @property (strong, nonatomic) StreamViewController *streamView;
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

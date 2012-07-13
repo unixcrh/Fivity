@@ -22,8 +22,8 @@
 		6C8665B215AFA5D3004D932F /* RegisterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A815AFA5D3004D932F /* RegisterButton@2x.png */; };
 		6C8665B315AFA5D3004D932F /* RegisterButtonPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A915AFA5D3004D932F /* RegisterButtonPushed.png */; };
 		6C8665B415AFA5D3004D932F /* RegisterButtonPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AA15AFA5D3004D932F /* RegisterButtonPushed@2x.png */; };
-		6C8665B515AFA5D3004D932F /* FitivityNavigationBarBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AB15AFA5D3004D932F /* FitivityNavigationBarBackplate.png */; };
-		6C8665B615AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AC15AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png */; };
+		6C8665B515AFA5D3004D932F /* NavigationBarBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AB15AFA5D3004D932F /* NavigationBarBackplate.png */; };
+		6C8665B615AFA5D3004D932F /* NavigationBarBackplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AC15AFA5D3004D932F /* NavigationBarBackplate@2x.png */; };
 		6C8665BD15AFA820004D932F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665BC15AFA820004D932F /* LoginViewController.xib */; };
 		6CA2690015AE2A1400CD205C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A75115ACFD4300C0FF75 /* Reachability.m */; };
 		6CA2690515AE2A5200CD205C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2690415AE2A5200CD205C /* SystemConfiguration.framework */; };
@@ -45,6 +45,19 @@
 		6CB1A75A15ACFFBC00C0FF75 /* OpeningLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */; };
 		6CB1A75B15ACFFBC00C0FF75 /* OpeningLogoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */; };
 		6CB1A78315AD067000C0FF75 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1A78215AD067000C0FF75 /* Parse.framework */; };
+		6CC7FB1315AFB62C00D21AA9 /* BackButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB0F15AFB62C00D21AA9 /* BackButtonIcon.png */; };
+		6CC7FB1415AFB62C00D21AA9 /* BackButtonIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1015AFB62C00D21AA9 /* BackButtonIcon@2x.png */; };
+		6CC7FB1515AFB62C00D21AA9 /* BluePillNavBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1115AFB62C00D21AA9 /* BluePillNavBarIcon.png */; };
+		6CC7FB1615AFB62C00D21AA9 /* BluePillNavBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1215AFB62C00D21AA9 /* BluePillNavBarIcon@2x.png */; };
+		6CC7FB2115AFB67D00D21AA9 /* ChooseActivityChooseActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1915AFB67D00D21AA9 /* ChooseActivityChooseActivity.png */; };
+		6CC7FB2215AFB67D00D21AA9 /* ChooseActivityChooseActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1A15AFB67D00D21AA9 /* ChooseActivityChooseActivity@2x.png */; };
+		6CC7FB2315AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1B15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed.png */; };
+		6CC7FB2415AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1C15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed@2x.png */; };
+		6CC7FB2515AFB67D00D21AA9 /* ChooseActivityChooseLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1D15AFB67D00D21AA9 /* ChooseActivityChooseLocation.png */; };
+		6CC7FB2615AFB67E00D21AA9 /* ChooseActivityChooseLocation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1E15AFB67D00D21AA9 /* ChooseActivityChooseLocation@2x.png */; };
+		6CC7FB2715AFB67E00D21AA9 /* ChooseActivityChooseLocationPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB1F15AFB67D00D21AA9 /* ChooseActivityChooseLocationPushed.png */; };
+		6CC7FB2815AFB67E00D21AA9 /* ChooseActivityChooseLocationPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB2015AFB67D00D21AA9 /* ChooseActivityChooseLocationPushed@2x.png */; };
+		6CC7FB4B15AFB80900D21AA9 /* ApplicationProfileTabNormalPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB4A15AFB80700D21AA9 /* ApplicationProfileTabNormalPushed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +78,11 @@
 		6C8665A815AFA5D3004D932F /* RegisterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RegisterButton@2x.png"; sourceTree = "<group>"; };
 		6C8665A915AFA5D3004D932F /* RegisterButtonPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterButtonPushed.png; sourceTree = "<group>"; };
 		6C8665AA15AFA5D3004D932F /* RegisterButtonPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RegisterButtonPushed@2x.png"; sourceTree = "<group>"; };
-		6C8665AB15AFA5D3004D932F /* FitivityNavigationBarBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityNavigationBarBackplate.png; sourceTree = "<group>"; };
-		6C8665AC15AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitivityNavigationBarBackplate@2x.png"; sourceTree = "<group>"; };
+		6C8665AB15AFA5D3004D932F /* NavigationBarBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBarBackplate.png; sourceTree = "<group>"; };
+		6C8665AC15AFA5D3004D932F /* NavigationBarBackplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBarBackplate@2x.png"; sourceTree = "<group>"; };
 		6C8665BC15AFA820004D932F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		6C8665D915AFB12B004D932F /* NSError+FITParseUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+FITParseUtilities.h"; sourceTree = "<group>"; };
+		6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+FITParseUtilities.m"; sourceTree = "<group>"; };
 		6CA2690415AE2A5200CD205C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6CA2691415AE2D2B00CD205C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6CA2691615AE2D7A00CD205C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -96,6 +111,44 @@
 		6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningLogoViewController.m; sourceTree = "<group>"; };
 		6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpeningLogoViewController.xib; path = Fitivity/OpeningLogoViewController.xib; sourceTree = "<group>"; };
 		6CB1A78215AD067000C0FF75 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6CC7FB0F15AFB62C00D21AA9 /* BackButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButtonIcon.png; sourceTree = "<group>"; };
+		6CC7FB1015AFB62C00D21AA9 /* BackButtonIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackButtonIcon@2x.png"; sourceTree = "<group>"; };
+		6CC7FB1115AFB62C00D21AA9 /* BluePillNavBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BluePillNavBarIcon.png; sourceTree = "<group>"; };
+		6CC7FB1215AFB62C00D21AA9 /* BluePillNavBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BluePillNavBarIcon@2x.png"; sourceTree = "<group>"; };
+		6CC7FB1915AFB67D00D21AA9 /* ChooseActivityChooseActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseActivityChooseActivity.png; sourceTree = "<group>"; };
+		6CC7FB1A15AFB67D00D21AA9 /* ChooseActivityChooseActivity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChooseActivityChooseActivity@2x.png"; sourceTree = "<group>"; };
+		6CC7FB1B15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseActivityChooseActivityPushed.png; sourceTree = "<group>"; };
+		6CC7FB1C15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChooseActivityChooseActivityPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB1D15AFB67D00D21AA9 /* ChooseActivityChooseLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseActivityChooseLocation.png; sourceTree = "<group>"; };
+		6CC7FB1E15AFB67D00D21AA9 /* ChooseActivityChooseLocation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChooseActivityChooseLocation@2x.png"; sourceTree = "<group>"; };
+		6CC7FB1F15AFB67D00D21AA9 /* ChooseActivityChooseLocationPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseActivityChooseLocationPushed.png; sourceTree = "<group>"; };
+		6CC7FB2015AFB67D00D21AA9 /* ChooseActivityChooseLocationPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ChooseActivityChooseLocationPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB2A15AFB72500D21AA9 /* ApplicationActivityTabNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationActivityTabNormal.png; sourceTree = "<group>"; };
+		6CC7FB2B15AFB72500D21AA9 /* ApplicationActivityTabNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationActivityTabNormal@2x.png"; sourceTree = "<group>"; };
+		6CC7FB2D15AFB72500D21AA9 /* ApplicationActivityTabNormalPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationActivityTabNormalPushed.png; sourceTree = "<group>"; };
+		6CC7FB2E15AFB72500D21AA9 /* ApplicationActivityTabNormalPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationActivityTabNormalPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB2F15AFB72500D21AA9 /* ApplicationActivityTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationActivityTabSelected.png; sourceTree = "<group>"; };
+		6CC7FB3115AFB72500D21AA9 /* ApplicationActivityTabSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationActivityTabSelected@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3215AFB72500D21AA9 /* ApplicationActivityTabSelectedPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationActivityTabSelectedPushed.png; sourceTree = "<group>"; };
+		6CC7FB3315AFB72500D21AA9 /* ApplicationActivityTabSelectedPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationActivityTabSelectedPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3415AFB72500D21AA9 /* ApplicationFeedTabNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationFeedTabNormal.png; sourceTree = "<group>"; };
+		6CC7FB3515AFB72500D21AA9 /* ApplicationFeedTabNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationFeedTabNormal@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3615AFB72500D21AA9 /* ApplicationFeedTabNormalPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationFeedTabNormalPushed.png; sourceTree = "<group>"; };
+		6CC7FB3715AFB72500D21AA9 /* ApplicationFeedTabNormalPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationFeedTabNormalPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3815AFB72500D21AA9 /* ApplicationFeedTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationFeedTabSelected.png; sourceTree = "<group>"; };
+		6CC7FB3915AFB72500D21AA9 /* ApplicationFeedTabSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationFeedTabSelected@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3A15AFB72500D21AA9 /* ApplicationFeedTabSelectedPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationFeedTabSelectedPushed.png; sourceTree = "<group>"; };
+		6CC7FB3B15AFB72500D21AA9 /* ApplicationFeedTabSelectedPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationFeedTabSelectedPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3C15AFB72500D21AA9 /* ApplicationProfileTabNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationProfileTabNormal.png; sourceTree = "<group>"; };
+		6CC7FB3D15AFB72500D21AA9 /* ApplicationProfileTabNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationProfileTabNormal@2x.png"; sourceTree = "<group>"; };
+		6CC7FB3F15AFB72500D21AA9 /* ApplicationProfileTabNormalPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationProfileTabNormalPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB4015AFB72500D21AA9 /* ApplicationProfileTabSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationProfileTabSelected.png; sourceTree = "<group>"; };
+		6CC7FB4115AFB72500D21AA9 /* ApplicationProfileTabSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationProfileTabSelected@2x.png"; sourceTree = "<group>"; };
+		6CC7FB4215AFB72500D21AA9 /* ApplicationProfileTabSelectedPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationProfileTabSelectedPushed.png; sourceTree = "<group>"; };
+		6CC7FB4315AFB72500D21AA9 /* ApplicationProfileTabSelectedPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationProfileTabSelectedPushed@2x.png"; sourceTree = "<group>"; };
+		6CC7FB4415AFB72500D21AA9 /* ApplicationTabBarBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationTabBarBackplate.png; sourceTree = "<group>"; };
+		6CC7FB4515AFB72500D21AA9 /* ApplicationTabBarBackplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationTabBarBackplate@2x.png"; sourceTree = "<group>"; };
+		6CC7FB4A15AFB80700D21AA9 /* ApplicationProfileTabNormalPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationProfileTabNormalPushed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +194,8 @@
 			children = (
 				6CB1A74C15ACFC6800C0FF75 /* FConfig.h */,
 				6CB1A74D15ACFC6800C0FF75 /* FConfig.m */,
+				6C8665D915AFB12B004D932F /* NSError+FITParseUtilities.h */,
+				6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */,
 			);
 			name = Config;
 			path = ..;
@@ -225,6 +280,8 @@
 		6CB1A74A15ACFC4100C0FF75 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6CC7FB2915AFB71D00D21AA9 /* Tab Bar */,
+				6CC7FB1815AFB67600D21AA9 /* Buttons */,
 				6C86659E15AFA571004D932F /* Login */,
 				6CB1A75C15AD004000C0FF75 /* Logos */,
 				6CB1A75215ACFF7000C0FF75 /* Backgrounds */,
@@ -255,8 +312,12 @@
 		6CB1A75215ACFF7000C0FF75 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				6C8665AB15AFA5D3004D932F /* FitivityNavigationBarBackplate.png */,
-				6C8665AC15AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png */,
+				6C8665AB15AFA5D3004D932F /* NavigationBarBackplate.png */,
+				6C8665AC15AFA5D3004D932F /* NavigationBarBackplate@2x.png */,
+				6CC7FB0F15AFB62C00D21AA9 /* BackButtonIcon.png */,
+				6CC7FB1015AFB62C00D21AA9 /* BackButtonIcon@2x.png */,
+				6CC7FB1115AFB62C00D21AA9 /* BluePillNavBarIcon.png */,
+				6CC7FB1215AFB62C00D21AA9 /* BluePillNavBarIcon@2x.png */,
 				6CB1A75315ACFF7800C0FF75 /* background.png */,
 				6CB1A75415ACFF7800C0FF75 /* background@2x.png */,
 			);
@@ -269,6 +330,54 @@
 				57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */,
 			);
 			name = Logos;
+			sourceTree = "<group>";
+		};
+		6CC7FB1815AFB67600D21AA9 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6CC7FB1915AFB67D00D21AA9 /* ChooseActivityChooseActivity.png */,
+				6CC7FB1A15AFB67D00D21AA9 /* ChooseActivityChooseActivity@2x.png */,
+				6CC7FB1B15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed.png */,
+				6CC7FB1C15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed@2x.png */,
+				6CC7FB1D15AFB67D00D21AA9 /* ChooseActivityChooseLocation.png */,
+				6CC7FB1E15AFB67D00D21AA9 /* ChooseActivityChooseLocation@2x.png */,
+				6CC7FB1F15AFB67D00D21AA9 /* ChooseActivityChooseLocationPushed.png */,
+				6CC7FB2015AFB67D00D21AA9 /* ChooseActivityChooseLocationPushed@2x.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		6CC7FB2915AFB71D00D21AA9 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				6CC7FB2A15AFB72500D21AA9 /* ApplicationActivityTabNormal.png */,
+				6CC7FB2B15AFB72500D21AA9 /* ApplicationActivityTabNormal@2x.png */,
+				6CC7FB2D15AFB72500D21AA9 /* ApplicationActivityTabNormalPushed.png */,
+				6CC7FB2E15AFB72500D21AA9 /* ApplicationActivityTabNormalPushed@2x.png */,
+				6CC7FB2F15AFB72500D21AA9 /* ApplicationActivityTabSelected.png */,
+				6CC7FB3115AFB72500D21AA9 /* ApplicationActivityTabSelected@2x.png */,
+				6CC7FB3215AFB72500D21AA9 /* ApplicationActivityTabSelectedPushed.png */,
+				6CC7FB3315AFB72500D21AA9 /* ApplicationActivityTabSelectedPushed@2x.png */,
+				6CC7FB3415AFB72500D21AA9 /* ApplicationFeedTabNormal.png */,
+				6CC7FB3515AFB72500D21AA9 /* ApplicationFeedTabNormal@2x.png */,
+				6CC7FB3615AFB72500D21AA9 /* ApplicationFeedTabNormalPushed.png */,
+				6CC7FB3715AFB72500D21AA9 /* ApplicationFeedTabNormalPushed@2x.png */,
+				6CC7FB3815AFB72500D21AA9 /* ApplicationFeedTabSelected.png */,
+				6CC7FB3915AFB72500D21AA9 /* ApplicationFeedTabSelected@2x.png */,
+				6CC7FB3A15AFB72500D21AA9 /* ApplicationFeedTabSelectedPushed.png */,
+				6CC7FB3B15AFB72500D21AA9 /* ApplicationFeedTabSelectedPushed@2x.png */,
+				6CC7FB3C15AFB72500D21AA9 /* ApplicationProfileTabNormal.png */,
+				6CC7FB3D15AFB72500D21AA9 /* ApplicationProfileTabNormal@2x.png */,
+				6CC7FB4A15AFB80700D21AA9 /* ApplicationProfileTabNormalPushed.png */,
+				6CC7FB3F15AFB72500D21AA9 /* ApplicationProfileTabNormalPushed@2x.png */,
+				6CC7FB4015AFB72500D21AA9 /* ApplicationProfileTabSelected.png */,
+				6CC7FB4115AFB72500D21AA9 /* ApplicationProfileTabSelected@2x.png */,
+				6CC7FB4215AFB72500D21AA9 /* ApplicationProfileTabSelectedPushed.png */,
+				6CC7FB4315AFB72500D21AA9 /* ApplicationProfileTabSelectedPushed@2x.png */,
+				6CC7FB4415AFB72500D21AA9 /* ApplicationTabBarBackplate.png */,
+				6CC7FB4515AFB72500D21AA9 /* ApplicationTabBarBackplate@2x.png */,
+			);
+			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,9 +448,22 @@
 				6C8665B215AFA5D3004D932F /* RegisterButton@2x.png in Resources */,
 				6C8665B315AFA5D3004D932F /* RegisterButtonPushed.png in Resources */,
 				6C8665B415AFA5D3004D932F /* RegisterButtonPushed@2x.png in Resources */,
-				6C8665B515AFA5D3004D932F /* FitivityNavigationBarBackplate.png in Resources */,
-				6C8665B615AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png in Resources */,
+				6C8665B515AFA5D3004D932F /* NavigationBarBackplate.png in Resources */,
+				6C8665B615AFA5D3004D932F /* NavigationBarBackplate@2x.png in Resources */,
 				6C8665BD15AFA820004D932F /* LoginViewController.xib in Resources */,
+				6CC7FB1315AFB62C00D21AA9 /* BackButtonIcon.png in Resources */,
+				6CC7FB1415AFB62C00D21AA9 /* BackButtonIcon@2x.png in Resources */,
+				6CC7FB1515AFB62C00D21AA9 /* BluePillNavBarIcon.png in Resources */,
+				6CC7FB1615AFB62C00D21AA9 /* BluePillNavBarIcon@2x.png in Resources */,
+				6CC7FB2115AFB67D00D21AA9 /* ChooseActivityChooseActivity.png in Resources */,
+				6CC7FB2215AFB67D00D21AA9 /* ChooseActivityChooseActivity@2x.png in Resources */,
+				6CC7FB2315AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed.png in Resources */,
+				6CC7FB2415AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed@2x.png in Resources */,
+				6CC7FB2515AFB67D00D21AA9 /* ChooseActivityChooseLocation.png in Resources */,
+				6CC7FB2615AFB67E00D21AA9 /* ChooseActivityChooseLocation@2x.png in Resources */,
+				6CC7FB2715AFB67E00D21AA9 /* ChooseActivityChooseLocationPushed.png in Resources */,
+				6CC7FB2815AFB67E00D21AA9 /* ChooseActivityChooseLocationPushed@2x.png in Resources */,
+				6CC7FB4B15AFB80900D21AA9 /* ApplicationProfileTabNormalPushed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

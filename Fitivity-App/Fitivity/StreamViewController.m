@@ -66,8 +66,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navigationItem.title = @"Fitivity";
-        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+		self.tabBarItem.image = [UIImage imageNamed:@"ApplicationFeedTabNormalPushed.png"];
     }
     return self;
 }
