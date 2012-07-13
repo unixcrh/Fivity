@@ -12,10 +12,9 @@
 #import <Parse/Parse.h>
 
 #import "OpeningLogoViewController.h"
+#import "LoginViewController.h"
 
-@class LoginViewController;
-
-@interface StreamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, PFLogInViewControllerDelegate, OpeningLogoViewControllerDelegate> {
+@interface StreamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, OpeningLogoViewControllerDelegate> {
 }
 
 @property (nonatomic, retain) LoginViewController *loginView;

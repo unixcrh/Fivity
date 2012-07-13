@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
+		6C86658715AFA1A6004D932F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658515AFA1A6004D932F /* LoginViewController.m */; };
+		6C86658C15AFA1BB004D932F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658A15AFA1BB004D932F /* SignUpViewController.m */; };
+		6C86658D15AFA1BB004D932F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C86658B15AFA1BB004D932F /* SignUpViewController.xib */; };
+		6C8665A115AFA57C004D932F /* LoginWithFacebookButtonImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C86659F15AFA57C004D932F /* LoginWithFacebookButtonImage.png */; };
+		6C8665A215AFA57C004D932F /* LoginWithFacebookButtonImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A015AFA57C004D932F /* LoginWithFacebookButtonImage@2x.png */; };
+		6C8665AD15AFA5D3004D932F /* LoginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A315AFA5D3004D932F /* LoginButton.png */; };
+		6C8665AE15AFA5D3004D932F /* LoginButton@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A415AFA5D3004D932F /* LoginButton@2.png */; };
+		6C8665AF15AFA5D3004D932F /* LoginButtonPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A515AFA5D3004D932F /* LoginButtonPushed.png */; };
+		6C8665B015AFA5D3004D932F /* LoginButtonPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A615AFA5D3004D932F /* LoginButtonPushed@2x.png */; };
+		6C8665B115AFA5D3004D932F /* RegisterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A715AFA5D3004D932F /* RegisterButton.png */; };
+		6C8665B215AFA5D3004D932F /* RegisterButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A815AFA5D3004D932F /* RegisterButton@2x.png */; };
+		6C8665B315AFA5D3004D932F /* RegisterButtonPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665A915AFA5D3004D932F /* RegisterButtonPushed.png */; };
+		6C8665B415AFA5D3004D932F /* RegisterButtonPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AA15AFA5D3004D932F /* RegisterButtonPushed@2x.png */; };
+		6C8665B515AFA5D3004D932F /* FitivityNavigationBarBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AB15AFA5D3004D932F /* FitivityNavigationBarBackplate.png */; };
+		6C8665B615AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665AC15AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png */; };
+		6C8665BD15AFA820004D932F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8665BC15AFA820004D932F /* LoginViewController.xib */; };
 		6CA2690015AE2A1400CD205C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A75115ACFD4300C0FF75 /* Reachability.m */; };
 		6CA2690515AE2A5200CD205C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2690415AE2A5200CD205C /* SystemConfiguration.framework */; };
 		6CA2691515AE2D2B00CD205C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2691415AE2D2B00CD205C /* AudioToolbox.framework */; };
@@ -28,13 +44,30 @@
 		6CB1A75615ACFF7800C0FF75 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A75415ACFF7800C0FF75 /* background@2x.png */; };
 		6CB1A75A15ACFFBC00C0FF75 /* OpeningLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */; };
 		6CB1A75B15ACFFBC00C0FF75 /* OpeningLogoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */; };
-		6CB1A78015AD057900C0FF75 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB1A77E15AD057900C0FF75 /* LoginViewController.m */; };
 		6CB1A78315AD067000C0FF75 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB1A78215AD067000C0FF75 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
 		57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6C86658415AFA1A6004D932F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6C86658515AFA1A6004D932F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6C86658915AFA1BB004D932F /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		6C86658A15AFA1BB004D932F /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		6C86658B15AFA1BB004D932F /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignUpViewController.xib; path = Fitivity/SignUpViewController.xib; sourceTree = "<group>"; };
+		6C86659F15AFA57C004D932F /* LoginWithFacebookButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginWithFacebookButtonImage.png; sourceTree = "<group>"; };
+		6C8665A015AFA57C004D932F /* LoginWithFacebookButtonImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginWithFacebookButtonImage@2x.png"; sourceTree = "<group>"; };
+		6C8665A315AFA5D3004D932F /* LoginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginButton.png; sourceTree = "<group>"; };
+		6C8665A415AFA5D3004D932F /* LoginButton@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginButton@2.png"; sourceTree = "<group>"; };
+		6C8665A515AFA5D3004D932F /* LoginButtonPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginButtonPushed.png; sourceTree = "<group>"; };
+		6C8665A615AFA5D3004D932F /* LoginButtonPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginButtonPushed@2x.png"; sourceTree = "<group>"; };
+		6C8665A715AFA5D3004D932F /* RegisterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterButton.png; sourceTree = "<group>"; };
+		6C8665A815AFA5D3004D932F /* RegisterButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RegisterButton@2x.png"; sourceTree = "<group>"; };
+		6C8665A915AFA5D3004D932F /* RegisterButtonPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RegisterButtonPushed.png; sourceTree = "<group>"; };
+		6C8665AA15AFA5D3004D932F /* RegisterButtonPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RegisterButtonPushed@2x.png"; sourceTree = "<group>"; };
+		6C8665AB15AFA5D3004D932F /* FitivityNavigationBarBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityNavigationBarBackplate.png; sourceTree = "<group>"; };
+		6C8665AC15AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitivityNavigationBarBackplate@2x.png"; sourceTree = "<group>"; };
+		6C8665BC15AFA820004D932F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6CA2690415AE2A5200CD205C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6CA2691415AE2D2B00CD205C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6CA2691615AE2D7A00CD205C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -62,8 +95,6 @@
 		6CB1A75715ACFFBC00C0FF75 /* OpeningLogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningLogoViewController.h; sourceTree = "<group>"; };
 		6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningLogoViewController.m; sourceTree = "<group>"; };
 		6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpeningLogoViewController.xib; path = Fitivity/OpeningLogoViewController.xib; sourceTree = "<group>"; };
-		6CB1A77D15AD057900C0FF75 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		6CB1A77E15AD057900C0FF75 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6CB1A78215AD067000C0FF75 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C86659E15AFA571004D932F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6C86659F15AFA57C004D932F /* LoginWithFacebookButtonImage.png */,
+				6C8665A015AFA57C004D932F /* LoginWithFacebookButtonImage@2x.png */,
+				6C8665A315AFA5D3004D932F /* LoginButton.png */,
+				6C8665A415AFA5D3004D932F /* LoginButton@2.png */,
+				6C8665A515AFA5D3004D932F /* LoginButtonPushed.png */,
+				6C8665A615AFA5D3004D932F /* LoginButtonPushed@2x.png */,
+				6C8665A715AFA5D3004D932F /* RegisterButton.png */,
+				6C8665A815AFA5D3004D932F /* RegisterButton@2x.png */,
+				6C8665A915AFA5D3004D932F /* RegisterButtonPushed.png */,
+				6C8665AA15AFA5D3004D932F /* RegisterButtonPushed@2x.png */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		6CA2695A15AE63E900CD205C /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +151,10 @@
 			children = (
 				6CB1A75715ACFFBC00C0FF75 /* OpeningLogoViewController.h */,
 				6CB1A75815ACFFBC00C0FF75 /* OpeningLogoViewController.m */,
-				6CB1A77D15AD057900C0FF75 /* LoginViewController.h */,
-				6CB1A77E15AD057900C0FF75 /* LoginViewController.m */,
+				6C86658415AFA1A6004D932F /* LoginViewController.h */,
+				6C86658515AFA1A6004D932F /* LoginViewController.m */,
+				6C86658915AFA1BB004D932F /* SignUpViewController.h */,
+				6C86658A15AFA1BB004D932F /* SignUpViewController.m */,
 			);
 			name = Opening;
 			sourceTree = "<group>";
@@ -175,6 +225,7 @@
 		6CB1A74A15ACFC4100C0FF75 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6C86659E15AFA571004D932F /* Login */,
 				6CB1A75C15AD004000C0FF75 /* Logos */,
 				6CB1A75215ACFF7000C0FF75 /* Backgrounds */,
 			);
@@ -185,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				6CB1A75915ACFFBC00C0FF75 /* OpeningLogoViewController.xib */,
+				6C8665BC15AFA820004D932F /* LoginViewController.xib */,
+				6C86658B15AFA1BB004D932F /* SignUpViewController.xib */,
 				6CA2691E15AE2FB900CD205C /* StreamViewController.xib */,
 			);
 			name = "Interface Files";
@@ -202,6 +255,8 @@
 		6CB1A75215ACFF7000C0FF75 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				6C8665AB15AFA5D3004D932F /* FitivityNavigationBarBackplate.png */,
+				6C8665AC15AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png */,
 				6CB1A75315ACFF7800C0FF75 /* background.png */,
 				6CB1A75415ACFF7800C0FF75 /* background@2x.png */,
 			);
@@ -273,6 +328,20 @@
 				6CB1A75B15ACFFBC00C0FF75 /* OpeningLogoViewController.xib in Resources */,
 				6CA2692015AE2FBA00CD205C /* StreamViewController.xib in Resources */,
 				57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */,
+				6C86658D15AFA1BB004D932F /* SignUpViewController.xib in Resources */,
+				6C8665A115AFA57C004D932F /* LoginWithFacebookButtonImage.png in Resources */,
+				6C8665A215AFA57C004D932F /* LoginWithFacebookButtonImage@2x.png in Resources */,
+				6C8665AD15AFA5D3004D932F /* LoginButton.png in Resources */,
+				6C8665AE15AFA5D3004D932F /* LoginButton@2.png in Resources */,
+				6C8665AF15AFA5D3004D932F /* LoginButtonPushed.png in Resources */,
+				6C8665B015AFA5D3004D932F /* LoginButtonPushed@2x.png in Resources */,
+				6C8665B115AFA5D3004D932F /* RegisterButton.png in Resources */,
+				6C8665B215AFA5D3004D932F /* RegisterButton@2x.png in Resources */,
+				6C8665B315AFA5D3004D932F /* RegisterButtonPushed.png in Resources */,
+				6C8665B415AFA5D3004D932F /* RegisterButtonPushed@2x.png in Resources */,
+				6C8665B515AFA5D3004D932F /* FitivityNavigationBarBackplate.png in Resources */,
+				6C8665B615AFA5D3004D932F /* FitivityNavigationBarBackplate@2x.png in Resources */,
+				6C8665BD15AFA820004D932F /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +356,10 @@
 				6CB1A73615ACFC1D00C0FF75 /* AppDelegate.m in Sources */,
 				6CB1A74E15ACFC6800C0FF75 /* FConfig.m in Sources */,
 				6CB1A75A15ACFFBC00C0FF75 /* OpeningLogoViewController.m in Sources */,
-				6CB1A78015AD057900C0FF75 /* LoginViewController.m in Sources */,
 				6CA2690015AE2A1400CD205C /* Reachability.m in Sources */,
 				6CA2691F15AE2FBA00CD205C /* StreamViewController.m in Sources */,
+				6C86658715AFA1A6004D932F /* LoginViewController.m in Sources */,
+				6C86658C15AFA1BB004D932F /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

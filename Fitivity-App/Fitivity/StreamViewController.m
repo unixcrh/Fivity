@@ -25,44 +25,12 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-#pragma mark - PFLoginViewController Delegate
-
-/*!
- Sent to the delegate to determine whether the log in request should be submitted to the server.
- @param username the username the user tries to log in with.
- @param password the password the user tries to log in with.
- @result a boolean indicating whether the log in should proceed.
- */
-- (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
-	return YES;
-}
-
-/*! @name Responding to Actions */
-/// Sent to the delegate when a PFUser is logged in.
-- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-	[logInController dismissModalViewControllerAnimated:YES];
-}
-
-/// Sent to the delegate when the log in attempt fails.
-- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
-	
-}
-
-/// Sent to the delegate when the log in screen is dismissed.
-- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
-	
-}
-
 #pragma mark - Helper Methods
 
 - (void)login {
 	if ([[FConfig instance] shouldLogIn]) {
 		if (!loginView) {
-			loginView = [[LoginViewController alloc] init];
-			loginView.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton | PFLogInFieldsLogInButton | PFLogInFieldsFacebook;
-            loginView.facebookPermissions = [NSArray arrayWithObjects:@"publish_stream", nil];
-			[loginView setDelegate:self];
+			loginView = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
 		}
 		[self presentModalViewController:loginView animated:YES];
 	}
@@ -108,15 +76,10 @@
     if ([PFUser currentUser] == nil) {
         [self login];
     } 
-    else {
-        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight];
 }
 
 - (void)viewDidUnload {

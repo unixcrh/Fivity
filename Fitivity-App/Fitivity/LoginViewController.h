@@ -1,17 +1,23 @@
 //
-//  LoginViewController.h
+//  LoginViewViewController.h
 //  Fitivity
 //
-//  Created by Nathaniel Doe on 7/10/12.
+//  Created by Nathaniel Doe on 7/12/12.
 //  Copyright (c) 2012 Fitivity. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
-#import <QuartzCore/QuartzCore.h>
 
-#import "OpeningLogoViewController.h"
+@interface LoginViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
-@interface LoginViewController : PFLogInViewController
+- (IBAction)signUp:(id)sender;
+- (IBAction)signIn:(id)sender;
+- (IBAction)signInWithFacebook:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *userNameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookSignUpButton;
 
 @end

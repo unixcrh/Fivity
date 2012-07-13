@@ -11,7 +11,7 @@
 
 #define kParseAppID			@"MmUj6HxQcfLSOUs31lG7uNVx9sl5dZR6gv0FqGHq"
 #define kParseClientKey		@"krpZsVM2UrU71NCxDbdAmbEMq1EXdpygkl251Wjl"
-#define kFacebookAppID		@""
+#define kFacebookAppID		@"109034229168990"	//CHANGE TO ACTUAL APP ID - THIS IS JUST A TEMP WORKING ONE
 #define kGoogleAnalyticsID	@""
 
 @implementation FConfig
