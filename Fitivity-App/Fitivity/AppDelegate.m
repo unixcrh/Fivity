@@ -39,12 +39,12 @@
 	[Parse setApplicationId:[[FConfig instance] getParseAppID] clientKey:[[FConfig instance] getParseClientKey]];
 	[PFFacebookUtils initializeWithApplicationId:[[FConfig instance] getFacebookAppID]];
 	
-	//Present the opening view
-	[self.streamView presentModalViewController:self.openingView animated:NO];
-	
 	self.window.rootViewController = self.tabBarController;
 	self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+	
+	//Present the opening view
+	[self.streamView presentModalViewController:self.openingView animated:NO];
 	
     return YES;
 }
