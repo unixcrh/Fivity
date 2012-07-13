@@ -10,6 +10,9 @@
 #import "SignUpViewController.h"
 #import "NSError+FITParseUtilities.h"
 
+#define kTextFieldMoveDistance          60
+#define kTextFieldAnimationDuration    0.3f
+
 @interface LoginViewController ()
 
 @end
@@ -75,17 +78,28 @@
 
 #pragma mark - UITextField Delegate 
 
+- (void) animateTextField:(UITextField*)textField Up:(BOOL)up {
+    
+    int movement = (up ? -kTextFieldMoveDistance : kTextFieldMoveDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: kTextFieldAnimationDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[textField resignFirstResponder];
 	return YES;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-	
+	[self animateTextField:textField Up:YES];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-	
+	[self animateTextField:textField Up:NO];
 }
 
 #pragma mark - view lifecycle
