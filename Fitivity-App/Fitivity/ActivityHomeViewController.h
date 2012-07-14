@@ -12,4 +12,7 @@
 
 @interface ActivityHomeViewController : UIViewController
 
+- (IBAction)chooseActivity:(id)sender;
+- (IBAction)chooseLocation:(id)sender;
+
 @end

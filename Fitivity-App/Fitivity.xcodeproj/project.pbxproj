@@ -9,6 +9,27 @@
 /* Begin PBXBuildFile section */
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
+		6C08842115B1C58500670936 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08841E15B1C58100670936 /* PullToRefreshTableViewController.m */; };
+		6C08842215B1C58700670936 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842015B1C58100670936 /* EGORefreshTableHeaderView.m */; };
+		6C08843D15B1C5A100670936 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842515B1C59E00670936 /* NSObject+SBJson.m */; };
+		6C08843E15B1C5A500670936 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842815B1C59E00670936 /* SBJsonParser.m */; };
+		6C08843F15B1C5A700670936 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842A15B1C59E00670936 /* SBJsonStreamParser.m */; };
+		6C08844015B1C5AD00670936 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842C15B1C59E00670936 /* SBJsonStreamParserAccumulator.m */; };
+		6C08844115B1C5AF00670936 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842E15B1C59E00670936 /* SBJsonStreamParserAdapter.m */; };
+		6C08844215B1C5B300670936 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843015B1C59E00670936 /* SBJsonStreamParserState.m */; };
+		6C08844315B1C5B700670936 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843215B1C59E00670936 /* SBJsonStreamWriter.m */; };
+		6C08844415B1C5BA00670936 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843415B1C59E00670936 /* SBJsonStreamWriterAccumulator.m */; };
+		6C08844515B1C5BD00670936 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843615B1C59E00670936 /* SBJsonStreamWriterState.m */; };
+		6C08844615B1C5C200670936 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843815B1C59E00670936 /* SBJsonTokeniser.m */; };
+		6C08844715B1C5C500670936 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843A15B1C59E00670936 /* SBJsonUTF8Stream.m */; };
+		6C08844815B1C5C600670936 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08843C15B1C59E00670936 /* SBJsonWriter.m */; };
+		6C08845215B1C63400670936 /* GooglePlacesConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08844B15B1C62700670936 /* GooglePlacesConnection.m */; };
+		6C08845315B1C63600670936 /* GooglePlacesObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08844D15B1C62700670936 /* GooglePlacesObject.m */; };
+		6C08845515B1C67000670936 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C08845415B1C67000670936 /* CoreLocation.framework */; };
+		6C08845715B1C72B00670936 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C08845615B1C72B00670936 /* MapKit.framework */; };
+		6C08845A15B1C90A00670936 /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08845915B1C90A00670936 /* ChooseLocationViewController.m */; };
+		6C08845B15B1CF0900670936 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08845115B1C62F00670936 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		6C08845D15B1D3D300670936 /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */; };
 		6C61768A15B0F24600E74B95 /* NSError+FITParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */; };
 		6C61768C15B0F24800E74B95 /* NSRegularExpression+FITUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2F58815B0E77A0032FA34 /* NSRegularExpression+FITUtilities.m */; };
 		6C86658715AFA1A6004D932F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658515AFA1A6004D932F /* LoginViewController.m */; };
@@ -96,6 +117,48 @@
 /* Begin PBXFileReference section */
 		57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
 		57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6C08841D15B1C58100670936 /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableViewController.h; sourceTree = "<group>"; };
+		6C08841E15B1C58100670936 /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshTableViewController.m; sourceTree = "<group>"; };
+		6C08841F15B1C58100670936 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		6C08842015B1C58100670936 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		6C08842415B1C59E00670936 /* NSObject+SBJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		6C08842515B1C59E00670936 /* NSObject+SBJson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		6C08842615B1C59E00670936 /* SBJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		6C08842715B1C59E00670936 /* SBJsonParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		6C08842815B1C59E00670936 /* SBJsonParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		6C08842915B1C59E00670936 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		6C08842A15B1C59E00670936 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		6C08842B15B1C59E00670936 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		6C08842C15B1C59E00670936 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		6C08842D15B1C59E00670936 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		6C08842E15B1C59E00670936 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		6C08842F15B1C59E00670936 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		6C08843015B1C59E00670936 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		6C08843115B1C59E00670936 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		6C08843215B1C59E00670936 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		6C08843315B1C59E00670936 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		6C08843415B1C59E00670936 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		6C08843515B1C59E00670936 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		6C08843615B1C59E00670936 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		6C08843715B1C59E00670936 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		6C08843815B1C59E00670936 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		6C08843915B1C59E00670936 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		6C08843A15B1C59E00670936 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		6C08843B15B1C59E00670936 /* SBJsonWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		6C08843C15B1C59E00670936 /* SBJsonWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		6C08844A15B1C62700670936 /* GooglePlacesConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlacesConnection.h; sourceTree = "<group>"; };
+		6C08844B15B1C62700670936 /* GooglePlacesConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesConnection.m; sourceTree = "<group>"; };
+		6C08844C15B1C62700670936 /* GooglePlacesObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlacesObject.h; sourceTree = "<group>"; };
+		6C08844D15B1C62700670936 /* GooglePlacesObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesObject.m; sourceTree = "<group>"; };
+		6C08844E15B1C62F00670936 /* GTMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		6C08844F15B1C62F00670936 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMGarbageCollection.h; sourceTree = "<group>"; };
+		6C08845015B1C62F00670936 /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
+		6C08845115B1C62F00670936 /* GTMNSString+URLArguments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+URLArguments.m"; sourceTree = "<group>"; };
+		6C08845415B1C67000670936 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6C08845615B1C72B00670936 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6C08845815B1C90A00670936 /* ChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
+		6C08845915B1C90A00670936 /* ChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
+		6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationViewController.xib; sourceTree = "<group>"; };
 		6C86658415AFA1A6004D932F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6C86658515AFA1A6004D932F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6C86658915AFA1BB004D932F /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -200,6 +263,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C08845715B1C72B00670936 /* MapKit.framework in Frameworks */,
+				6C08845515B1C67000670936 /* CoreLocation.framework in Frameworks */,
 				57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */,
 				6CA2691B15AE2E1200CD205C /* Security.framework in Frameworks */,
 				6CA2691915AE2DEB00CD205C /* MobileCoreServices.framework in Frameworks */,
@@ -216,6 +281,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C08841B15B1C56000670936 /* Google Places */ = {
+			isa = PBXGroup;
+			children = (
+				6C08844915B1C5CD00670936 /* GTM */,
+				6C08842315B1C59000670936 /* SBJSON */,
+				6C08841C15B1C57400670936 /* Controls */,
+				6C08844A15B1C62700670936 /* GooglePlacesConnection.h */,
+				6C08844B15B1C62700670936 /* GooglePlacesConnection.m */,
+				6C08844C15B1C62700670936 /* GooglePlacesObject.h */,
+				6C08844D15B1C62700670936 /* GooglePlacesObject.m */,
+			);
+			name = "Google Places";
+			sourceTree = "<group>";
+		};
+		6C08841C15B1C57400670936 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6C08841D15B1C58100670936 /* PullToRefreshTableViewController.h */,
+				6C08841E15B1C58100670936 /* PullToRefreshTableViewController.m */,
+				6C08841F15B1C58100670936 /* EGORefreshTableHeaderView.h */,
+				6C08842015B1C58100670936 /* EGORefreshTableHeaderView.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		6C08842315B1C59000670936 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				6C08842415B1C59E00670936 /* NSObject+SBJson.h */,
+				6C08842515B1C59E00670936 /* NSObject+SBJson.m */,
+				6C08842615B1C59E00670936 /* SBJson.h */,
+				6C08842715B1C59E00670936 /* SBJsonParser.h */,
+				6C08842815B1C59E00670936 /* SBJsonParser.m */,
+				6C08842915B1C59E00670936 /* SBJsonStreamParser.h */,
+				6C08842A15B1C59E00670936 /* SBJsonStreamParser.m */,
+				6C08842B15B1C59E00670936 /* SBJsonStreamParserAccumulator.h */,
+				6C08842C15B1C59E00670936 /* SBJsonStreamParserAccumulator.m */,
+				6C08842D15B1C59E00670936 /* SBJsonStreamParserAdapter.h */,
+				6C08842E15B1C59E00670936 /* SBJsonStreamParserAdapter.m */,
+				6C08842F15B1C59E00670936 /* SBJsonStreamParserState.h */,
+				6C08843015B1C59E00670936 /* SBJsonStreamParserState.m */,
+				6C08843115B1C59E00670936 /* SBJsonStreamWriter.h */,
+				6C08843215B1C59E00670936 /* SBJsonStreamWriter.m */,
+				6C08843315B1C59E00670936 /* SBJsonStreamWriterAccumulator.h */,
+				6C08843415B1C59E00670936 /* SBJsonStreamWriterAccumulator.m */,
+				6C08843515B1C59E00670936 /* SBJsonStreamWriterState.h */,
+				6C08843615B1C59E00670936 /* SBJsonStreamWriterState.m */,
+				6C08843715B1C59E00670936 /* SBJsonTokeniser.h */,
+				6C08843815B1C59E00670936 /* SBJsonTokeniser.m */,
+				6C08843915B1C59E00670936 /* SBJsonUTF8Stream.h */,
+				6C08843A15B1C59E00670936 /* SBJsonUTF8Stream.m */,
+				6C08843B15B1C59E00670936 /* SBJsonWriter.h */,
+				6C08843C15B1C59E00670936 /* SBJsonWriter.m */,
+			);
+			name = SBJSON;
+			sourceTree = "<group>";
+		};
+		6C08844915B1C5CD00670936 /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				6C08844E15B1C62F00670936 /* GTMDefines.h */,
+				6C08844F15B1C62F00670936 /* GTMGarbageCollection.h */,
+				6C08845015B1C62F00670936 /* GTMNSString+URLArguments.h */,
+				6C08845115B1C62F00670936 /* GTMNSString+URLArguments.m */,
+			);
+			name = GTM;
+			sourceTree = "<group>";
+		};
 		6C86659E15AFA571004D932F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,8 +392,9 @@
 		6CB1A71615ACFC1D00C0FF75 = {
 			isa = PBXGroup;
 			children = (
-				6CB1A74A15ACFC4100C0FF75 /* Images */,
+				6C08841B15B1C56000670936 /* Google Places */,
 				6CB1A72B15ACFC1D00C0FF75 /* Fitivity */,
+				6CB1A74A15ACFC4100C0FF75 /* Images */,
 				6CB1A74B15ACFC4900C0FF75 /* Interface Files */,
 				6CB1A72C15ACFC1D00C0FF75 /* Supporting Files */,
 				6CB1A72415ACFC1D00C0FF75 /* Frameworks */,
@@ -279,6 +413,8 @@
 		6CB1A72415ACFC1D00C0FF75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C08845615B1C72B00670936 /* MapKit.framework */,
+				6C08845415B1C67000670936 /* CoreLocation.framework */,
 				57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */,
 				6CA2691A15AE2E1200CD205C /* Security.framework */,
 				6CA2691815AE2DEB00CD205C /* MobileCoreServices.framework */,
@@ -471,6 +607,8 @@
 			children = (
 				6CDCD5B315B1ADE300986AA2 /* ActivityHomeViewController.h */,
 				6CDCD5B415B1ADE300986AA2 /* ActivityHomeViewController.m */,
+				6C08845815B1C90A00670936 /* ChooseLocationViewController.h */,
+				6C08845915B1C90A00670936 /* ChooseLocationViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -496,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				6CDCD5B515B1ADE300986AA2 /* ActivityHomeViewController.xib */,
+				6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -620,6 +759,7 @@
 				6CC7FB4B15AFB80900D21AA9 /* ApplicationProfileTabNormalPushed.png in Resources */,
 				6CDCD5B715B1ADE300986AA2 /* ActivityHomeViewController.xib in Resources */,
 				6CDCD5BC15B1AE9700986AA2 /* UserProfileViewController.xib in Resources */,
+				6C08845D15B1D3D300670936 /* ChooseLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +770,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C08843D15B1C5A100670936 /* NSObject+SBJson.m in Sources */,
+				6C08843E15B1C5A500670936 /* SBJsonParser.m in Sources */,
+				6C08843F15B1C5A700670936 /* SBJsonStreamParser.m in Sources */,
+				6C08844015B1C5AD00670936 /* SBJsonStreamParserAccumulator.m in Sources */,
+				6C08844115B1C5AF00670936 /* SBJsonStreamParserAdapter.m in Sources */,
+				6C08844215B1C5B300670936 /* SBJsonStreamParserState.m in Sources */,
+				6C08844315B1C5B700670936 /* SBJsonStreamWriter.m in Sources */,
+				6C08844415B1C5BA00670936 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				6C08844515B1C5BD00670936 /* SBJsonStreamWriterState.m in Sources */,
+				6C08844615B1C5C200670936 /* SBJsonTokeniser.m in Sources */,
+				6C08844715B1C5C500670936 /* SBJsonUTF8Stream.m in Sources */,
+				6C08844815B1C5C600670936 /* SBJsonWriter.m in Sources */,
+				6C08845215B1C63400670936 /* GooglePlacesConnection.m in Sources */,
+				6C08845315B1C63600670936 /* GooglePlacesObject.m in Sources */,
+				6C08845B15B1CF0900670936 /* GTMNSString+URLArguments.m in Sources */,
 				6CB1A73215ACFC1D00C0FF75 /* main.m in Sources */,
 				6CB1A73615ACFC1D00C0FF75 /* AppDelegate.m in Sources */,
 				6CB1A74E15ACFC6800C0FF75 /* FConfig.m in Sources */,
@@ -643,6 +798,9 @@
 				6CB1B21915B1A17B004DDDCA /* FTabBarViewController.m in Sources */,
 				6CDCD5B615B1ADE300986AA2 /* ActivityHomeViewController.m in Sources */,
 				6CDCD5BB15B1AE9700986AA2 /* UserProfileViewController.m in Sources */,
+				6C08842115B1C58500670936 /* PullToRefreshTableViewController.m in Sources */,
+				6C08842215B1C58700670936 /* EGORefreshTableHeaderView.m in Sources */,
+				6C08845A15B1C90A00670936 /* ChooseLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,26 @@
 //
 
 #import "ActivityHomeViewController.h"
+#import "ChooseLocationViewController.h"
 
 @interface ActivityHomeViewController ()
 
 @end
 
 @implementation ActivityHomeViewController
+
+#pragma mark - IBAction's 
+
+- (IBAction)chooseActivity:(id)sender {
+	
+}
+
+- (IBAction)chooseLocation:(id)sender {
+	ChooseLocationViewController *location = [[ChooseLocationViewController alloc] initWithNibName:@"ChooseLocationViewController" bundle:nil];
+	[self.navigationController pushViewController:location animated:YES];
+}
+
+#pragma mark - View Lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

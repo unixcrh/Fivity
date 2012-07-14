@@ -13,6 +13,7 @@
 #define kParseClientKey		@"krpZsVM2UrU71NCxDbdAmbEMq1EXdpygkl251Wjl"
 #define kFacebookAppID		@"109034229168990"	//CHANGE TO ACTUAL APP ID - THIS IS JUST A TEMP WORKING ONE
 #define kGoogleAnalyticsID	@""
+#define kGooglePlacesAPIKey	@"AIzaSyBfy3BE0CccDZa_DiolZWsbxNu6DMV6FfA" //CHANGE TO ACTUAL API KEY - THIS IS JUST A TEMP WORKING ONE
 
 @implementation FConfig
 
@@ -58,6 +59,10 @@ static FConfig *instance;
 
 - (NSString *)getGoogleAnalyticsID {
 	return kGoogleAnalyticsID;
+}
+
+- (NSString *)getGooglePlacesAPIKey {
+	return kGooglePlacesAPIKey;
 }
 
 @end

@@ -23,5 +23,6 @@
 - (NSString *)getParseClientKey;
 - (NSString *)getFacebookAppID;
 - (NSString *)getGoogleAnalyticsID;
+- (NSString *)getGooglePlacesAPIKey;
 
 @end
