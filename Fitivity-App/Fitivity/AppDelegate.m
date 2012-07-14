@@ -32,10 +32,6 @@
 	
 	[self.openingView setDelegate:self.tabBarView];
 	
-	//Configure the Navigation Bar Controller
-//	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:streamView];
-//	[navController.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackplate"] forBarMetrics:UIBarMetricsDefault];
-	
 	//Set up parse credentials 
 	[Parse setApplicationId:[[FConfig instance] getParseAppID] clientKey:[[FConfig instance] getParseClientKey]];
 	[PFFacebookUtils initializeWithApplicationId:[[FConfig instance] getFacebookAppID]];

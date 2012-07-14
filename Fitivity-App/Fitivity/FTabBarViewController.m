@@ -58,27 +58,6 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-
-#pragma mark - IBAction's
-
--(IBAction)leftTabButtonPushed:(id)sender {
-	if (!self.isShowingLeftTab) {
-	  [self showLeftTab];
-	}
-}
-
--(IBAction)centerTabButtonPushed:(id)sender {
-	if (!self.isShowingCenterTab) {
-	  [self showCenterTab];
-	}
-}
-
--(IBAction)rightTabButtonPushed:(id)sender {
-	if (!self.isShowingRightTab) {
-	  [self showRightTab];
-	}
-}
-
 #pragma mark - Helper methods
 
 -(BOOL)isShowingLeftTab {
@@ -118,6 +97,38 @@
 	[self dismissModalViewControllerAnimated:NO];
 }
 
+- (void)unselectAllTabs {
+	[_leftTabButton setImage:[UIImage imageNamed:@"ApplicationFeedTabNormal.png"] forState:UIControlStateNormal];
+	[_centerTabButton setImage:[UIImage imageNamed:@"ApplicationActivityTabNormal.png"] forState:UIControlStateNormal];
+	[_rightTabButton setImage:[UIImage imageNamed:@"ApplicationProfileTabNormal.png"] forState:UIControlStateNormal];
+}
+
+
+#pragma mark - IBAction's
+
+-(IBAction)leftTabButtonPushed:(id)sender {
+	if (!self.isShowingLeftTab) {
+		[self unselectAllTabs];
+		[_leftTabButton setImage:[UIImage imageNamed:@"ApplicationFeedTabSelected.png"] forState:UIControlStateNormal];
+		[self showLeftTab];
+	}
+}
+
+-(IBAction)centerTabButtonPushed:(id)sender {
+	if (!self.isShowingCenterTab) {
+		[self unselectAllTabs];
+		[_centerTabButton setImage:[UIImage imageNamed:@"ApplicationActivityTabSelected.png"] forState:UIControlStateNormal];
+		[self showCenterTab];
+	}
+}
+
+-(IBAction)rightTabButtonPushed:(id)sender {
+	if (!self.isShowingRightTab) {
+		[self unselectAllTabs];
+		[_rightTabButton setImage:[UIImage imageNamed:@"ApplicationProfileTabSelected.png"] forState:UIControlStateNormal];
+		[self showRightTab];
+	}
+}
 
 #pragma mark - View Lifecycle
 
@@ -128,14 +139,11 @@
 		self.centerRootViewController = centerRootViewController;
 		self.rightRootViewController = rightViewController;
 		
-//		self.leftNavigationController = [UINavigationController fitNavigationControllerWithRootViewController:self.leftRootViewController];
-//		self.centerNavigationController = [UINavigationController fitNavigationControllerWithRootViewController:self.centerRootViewController];
-//		self.rightNavigationController = [UINavigationController fitNavigationControllerWithRootViewController:self.rightRootViewController];
-//		^ fallback if iOS 5 skinning won't play nice
-		
 		self.leftNavigationController = [[UINavigationController  alloc] initWithRootViewController:self.leftRootViewController];
 		self.centerNavigationController = [[UINavigationController alloc] initWithRootViewController:self.centerRootViewController];
 		self.rightNavigationController = [[UINavigationController alloc] initWithRootViewController:self.rightRootViewController];
+		
+		[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackplate"] forBarMetrics:UIBarMetricsDefault];
 	}
 	return self;
 }
