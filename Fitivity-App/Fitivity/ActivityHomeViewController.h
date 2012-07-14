@@ -14,8 +14,11 @@
 #import "ChooseLocationViewController.h"
 
 @interface ActivityHomeViewController : UIViewController <ChooseActivityViewControllerDelegate, ChooseLocationViewControllerDelegate> {
-	BOOL hasPickedBoth;
+	BOOL hasPickedActivity, hasPickedLocation;
 }
+
+@property (weak, nonatomic) IBOutlet UIButton *chooseActivityButton;
+@property (weak, nonatomic) IBOutlet UIButton *chooseLocationButton;
 
 - (IBAction)chooseActivity:(id)sender;
 - (IBAction)chooseLocation:(id)sender;

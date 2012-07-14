@@ -24,6 +24,7 @@
 @synthesize responseData;
 @synthesize locations;
 @synthesize locationsFilterResults;
+@synthesize delegate;
 
 #pragma mark - Helper Methods
 
@@ -170,11 +171,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
 	
-	//UPDATED from locations to locationFilterResults
-	GooglePlacesObject *places = [locationsFilterResults objectAtIndex:selectedRowIndex.row];
-		
+	NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+	GooglePlacesObject *place = [locationsFilterResults objectAtIndex:selectedRowIndex.row];
+	
+	if ([delegate respondsToSelector:@selector(userPickedLocation:)]) {
+		[delegate userPickedLocation:place]; //Tell the delegate what was selected
+	}
+	
+	[self.navigationController popViewControllerAnimated:YES];
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

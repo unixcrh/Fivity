@@ -44,4 +44,6 @@
 @property (nonatomic, retain) NSMutableArray    *locations;
 @property (nonatomic, retain) NSMutableArray    *locationsFilterResults;
 
+@property (nonatomic, assign) id <ChooseLocationViewControllerDelegate> delegate;
+
 @end

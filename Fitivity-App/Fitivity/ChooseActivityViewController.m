@@ -17,7 +17,59 @@
 @synthesize activitiesTable;
 @synthesize delegate;
 
-#pragma mark - UITableViewDelegate 
+#pragma mark - Helper Methods
+
+- (void)attemptQuery {	
+	
+	@synchronized(self) { 
+		
+		if (!query) {
+			query = [PFQuery queryWithClassName:@"Activity"];
+			[query setCachePolicy:kPFCachePolicyNetworkElseCache]; //If the user isn't connected, it will look on the device disk for a cached version
+			[query orderByAscending:@"category"];
+			[query setLimit:200]; //Defaults to 100, just incase ones are added later on set to 200
+			[query whereKeyExists:@"category"];
+			[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+				
+				if (!error) {
+					NSString *lastCategory = @"";
+					BOOL firstTry = YES;
+					for (PFObject *o in objects) {
+
+						if ([lastCategory isEqualToString:[o objectForKey:@"category"]]) {
+							//If the object is in the same category as the last object then add it to the array
+							[categoryArray addObject:o];
+						}
+						else {
+							//Add the last category to the all categories array, get the new category, reset the array and add the next object
+							//Don't want to add an empty array on the first attempt though.
+							if (firstTry) {
+								firstTry = NO;
+							} 
+							else {
+								[categories addObject:categoryArray];
+							}
+							
+							lastCategory = [o objectForKey:@"category"];
+							categoryArray = nil;
+							categoryArray = [[NSMutableArray alloc] initWithObjects: o, nil];
+						}
+					}
+					[categories addObject:categoryArray];	//Need to add the last category
+					categoryArray = nil;					//Clean up
+
+					[activitiesTable reloadData];
+				}
+				else {
+					UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Loading Error" message:@"Something went wrong when loading activities" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+					[alert show];
+				}
+			}];
+		}
+	}
+}
+
+#pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
@@ -27,22 +79,43 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 	
+	PFObject *activity = [(NSMutableArray *)[categories objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	cell.textLabel.text = [activity objectForKey:@"name"];
+	
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;//CHANGE TO DYNAMIC 
+    return [(NSMutableArray *)[categories objectAtIndex:section] count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 1;  //CHANGE TO QUERY VALUE OF ACTIVITY/CATEGORY COUNT
+	return [categories count];  
 }
 
-#pragma mark - UITableViewDataSource 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	
+	if ([categories count] > 0) {
+		PFObject *firstObject = [(NSMutableArray *)[categories objectAtIndex:section] objectAtIndex:0];
+		
+		return [firstObject objectForKey:@"category"];
+	}
+	
+	return @"";
+}
+
+#pragma mark - UITableViewDelegate 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+	NSString *selected = [[[tableView cellForRowAtIndexPath:indexPath] textLabel] text];
+	
+	if ([delegate respondsToSelector:@selector(userPickedActivity:)]) {
+		[delegate userPickedActivity:selected];
+	}
+	
+	[self.navigationController popViewControllerAnimated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -58,7 +131,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+	categoryArray = [[NSMutableArray alloc] init];
+	categories = [[NSMutableArray alloc] init];
+	[self attemptQuery];
 }
 
 - (void)viewDidUnload {

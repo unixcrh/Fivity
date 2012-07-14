@@ -17,21 +17,27 @@
 @implementation ActivityHomeViewController
 
 #pragma mark - IBAction's 
+@synthesize chooseActivityButton;
+@synthesize chooseLocationButton;
 
 - (IBAction)chooseActivity:(id)sender {
 	ChooseActivityViewController *activity = [[ChooseActivityViewController alloc] initWithNibName:@"ChooseActivityViewController" bundle:nil];
+	[activity setDelegate: self];
 	[self.navigationController pushViewController:activity animated:YES];
 }
 
 - (IBAction)chooseLocation:(id)sender {
 	ChooseLocationViewController *location = [[ChooseLocationViewController alloc] initWithNibName:@"ChooseLocationViewController" bundle:nil];
+	[location setDelegate: self];
 	[self.navigationController pushViewController:location animated:YES];
 }
 
 #pragma mark - ChooseActivityViewController Delegate
 
 - (void)userPickedActivity:(NSString *)activityName {
-	if (hasPickedBoth) {
+	hasPickedActivity = YES;
+	[chooseActivityButton setEnabled:NO];
+	if (hasPickedActivity && hasPickedLocation) {
 		
 	}
 }
@@ -39,7 +45,9 @@
 #pragma mark - ChoosLocationViewController Delegate
 
 - (void)userPickedLocation:(GooglePlacesObject *)place {
-	if (hasPickedBoth) {
+	hasPickedLocation = YES;
+	[chooseLocationButton setEnabled:NO];
+	if (hasPickedActivity && hasPickedLocation) {
 		
 	}
 }
@@ -58,10 +66,13 @@
     [super viewDidLoad];
 
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
-	hasPickedBoth = NO; //Nothing picked when loaded
+	hasPickedActivity = NO; //Nothing picked when loaded
+	hasPickedLocation = NO;
 }
 
 - (void)viewDidUnload {
+	[self setChooseActivityButton:nil];
+	[self setChooseLocationButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
