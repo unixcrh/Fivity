@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
+		6C61768A15B0F24600E74B95 /* NSError+FITParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */; };
+		6C61768C15B0F24800E74B95 /* NSRegularExpression+FITUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2F58815B0E77A0032FA34 /* NSRegularExpression+FITUtilities.m */; };
 		6C86658715AFA1A6004D932F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658515AFA1A6004D932F /* LoginViewController.m */; };
 		6C86658C15AFA1BB004D932F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658A15AFA1BB004D932F /* SignUpViewController.m */; };
 		6C86658D15AFA1BB004D932F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C86658B15AFA1BB004D932F /* SignUpViewController.xib */; };
@@ -149,6 +151,8 @@
 		6CC7FB4415AFB72500D21AA9 /* ApplicationTabBarBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationTabBarBackplate.png; sourceTree = "<group>"; };
 		6CC7FB4515AFB72500D21AA9 /* ApplicationTabBarBackplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ApplicationTabBarBackplate@2x.png"; sourceTree = "<group>"; };
 		6CC7FB4A15AFB80700D21AA9 /* ApplicationProfileTabNormalPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ApplicationProfileTabNormalPushed.png; sourceTree = "<group>"; };
+		6CD2F58715B0E77A0032FA34 /* NSRegularExpression+FITUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+FITUtilities.h"; sourceTree = "<group>"; };
+		6CD2F58815B0E77A0032FA34 /* NSRegularExpression+FITUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+FITUtilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +198,6 @@
 			children = (
 				6CB1A74C15ACFC6800C0FF75 /* FConfig.h */,
 				6CB1A74D15ACFC6800C0FF75 /* FConfig.m */,
-				6C8665D915AFB12B004D932F /* NSError+FITParseUtilities.h */,
-				6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */,
 			);
 			name = Config;
 			path = ..;
@@ -256,6 +258,7 @@
 			children = (
 				6CB1A73415ACFC1D00C0FF75 /* AppDelegate.h */,
 				6CB1A73515ACFC1D00C0FF75 /* AppDelegate.m */,
+				6CD2F58A15B0E77D0032FA34 /* Categories */,
 				6CA2695A15AE63E900CD205C /* Config */,
 				6CA2695B15AE640400CD205C /* Opening */,
 				6CA2691C15AE2FB900CD205C /* StreamViewController.h */,
@@ -380,6 +383,18 @@
 			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
+		6CD2F58A15B0E77D0032FA34 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6C8665D915AFB12B004D932F /* NSError+FITParseUtilities.h */,
+				6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */,
+				6CD2F58715B0E77A0032FA34 /* NSRegularExpression+FITUtilities.h */,
+				6CD2F58815B0E77A0032FA34 /* NSRegularExpression+FITUtilities.m */,
+			);
+			name = Categories;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,6 +497,8 @@
 				6CA2691F15AE2FBA00CD205C /* StreamViewController.m in Sources */,
 				6C86658715AFA1A6004D932F /* LoginViewController.m in Sources */,
 				6C86658C15AFA1BB004D932F /* SignUpViewController.m in Sources */,
+				6C61768A15B0F24600E74B95 /* NSError+FITParseUtilities.m in Sources */,
+				6C61768C15B0F24800E74B95 /* NSRegularExpression+FITUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

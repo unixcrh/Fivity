@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @protocol SignUpViewControllerDelegate;
 
 @interface SignUpViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate> {
     NSString *errorMessage;
+	
+	PFQuery *activeUserNameQuery;
+	PFQuery *activeEMailQuery;
+	
+	NSRegularExpression *userNameExpression;
 }
 
 - (IBAction)resignSignUp:(id)sender;

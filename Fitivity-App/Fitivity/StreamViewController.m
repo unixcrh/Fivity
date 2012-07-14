@@ -36,6 +36,10 @@
 	}
 }
 
+- (void)dismissChildView {
+	[self dismissModalViewControllerAnimated:NO];
+}
+
 #pragma mark - UITableViewDelegate 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,6 +79,7 @@
     if ([PFUser currentUser] == nil) {
         [self login];
     } 
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissChildView) name:@"signedIn" object: nil];
 }
 
 - (void)viewDidLoad {
@@ -84,7 +89,8 @@
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

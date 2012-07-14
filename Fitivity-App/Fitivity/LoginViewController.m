@@ -25,12 +25,20 @@
 @synthesize facebookSignUpButton;
 @synthesize resignButton;
 
+#pragma mark - Helper Methods 
+
+- (void)clearInput {
+	[self.userNameField setText:@""];
+	[self.passwordField setText:@""];
+}
+
 #pragma mark - IBActions
 
 - (IBAction)signUp:(id)sender {
 	SignUpViewController *signUpView = [[SignUpViewController alloc] initWithNibName:@"SignUpViewController" bundle:nil];
     [signUpView setDelegate:self];
 	[self presentModalViewController:signUpView animated:YES];
+	[self clearInput];
 }
 
 - (IBAction)signIn:(id)sender {
@@ -93,6 +101,7 @@
 
 //User successfully signed up, log them in and then load discover screen
 -(void)userSignedUpSuccessfully:(SignUpViewController *)view {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"signedIn" object:self];
     [self dismissModalViewControllerAnimated:YES];
 }
 

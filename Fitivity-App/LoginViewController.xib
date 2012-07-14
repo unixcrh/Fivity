@@ -114,6 +114,7 @@
 							<int key="IBUIReturnKeyType">9</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="761884421">
 							<int key="type">1</int>
 							<double key="pointSize">14</double>
@@ -151,6 +152,7 @@
 							<bool key="IBUISecureTextEntry">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<reference key="IBUIFontDescription" ref="761884421"/>
 						<reference key="IBUIFont" ref="972427454"/>
 					</object>
@@ -207,7 +209,7 @@
 					<object class="IBUILabel" id="591608198">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{43, 414}, {151, 26}}</string>
+						<string key="NSFrame">{{34, 414}, {151, 26}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="353935540"/>
@@ -220,25 +222,27 @@
 						<string key="IBUIText">or sign in with</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAAA</bytes>
+							<bytes key="NSRGB">MSAxIDEAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<int key="type">1</int>
-							<double key="pointSize">21</double>
+							<string key="name">STHeitiTC-Medium</string>
+							<string key="family">Heiti TC</string>
+							<int key="traits">2</int>
+							<double key="pointSize">24</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">21</double>
+							<string key="NSName">STHeitiTC-Medium</string>
+							<double key="NSSize">24</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
 					<object class="IBUIButton" id="353935540">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{202, 405}, {85, 43}}</string>
+						<string key="NSFrame">{{203, 408}, {85, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -401,9 +405,9 @@
 							<reference ref="347172793"/>
 							<reference ref="588380026"/>
 							<reference ref="1031524093"/>
+							<reference ref="331978137"/>
 							<reference ref="591608198"/>
 							<reference ref="353935540"/>
-							<reference ref="331978137"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

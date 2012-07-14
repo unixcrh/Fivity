@@ -58,7 +58,7 @@
 						<string key="NSFrameSize">{320, 335}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="416162065"/>
+						<reference key="NSNextKeyView" ref="173618160"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -92,6 +92,7 @@
 						<string key="NSFrame">{{4, 4}, {29, 29}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="416162065"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -132,9 +133,11 @@
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+							<int key="IBUIAutocapitalizationType">1</int>
 							<int key="IBUIReturnKeyType">9</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="982671240">
 							<int key="type">1</int>
 							<double key="pointSize">14</double>
@@ -171,6 +174,7 @@
 							<int key="IBUIReturnKeyType">9</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<reference key="IBUIFontDescription" ref="982671240"/>
 						<reference key="IBUIFont" ref="764154434"/>
 					</object>
@@ -201,6 +205,7 @@
 							<bool key="IBUISecureTextEntry">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<reference key="IBUIFontDescription" ref="982671240"/>
 						<reference key="IBUIFont" ref="764154434"/>
 					</object>
@@ -231,6 +236,7 @@
 							<bool key="IBUISecureTextEntry">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<reference key="IBUIFontDescription" ref="982671240"/>
 						<reference key="IBUIFont" ref="764154434"/>
 					</object>
@@ -401,13 +407,13 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="416162065"/>
-							<reference ref="169650442"/>
 							<reference ref="249873309"/>
 							<reference ref="630174808"/>
 							<reference ref="1039839790"/>
 							<reference ref="146175314"/>
 							<reference ref="838243522"/>
 							<reference ref="173618160"/>
+							<reference ref="169650442"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
