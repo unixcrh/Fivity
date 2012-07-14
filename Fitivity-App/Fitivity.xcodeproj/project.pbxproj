@@ -32,6 +32,18 @@
 		6C08845D15B1D3D300670936 /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */; };
 		6C61768A15B0F24600E74B95 /* NSError+FITParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */; };
 		6C61768C15B0F24800E74B95 /* NSRegularExpression+FITUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2F58815B0E77A0032FA34 /* NSRegularExpression+FITUtilities.m */; };
+		6C7722AF15B1EB670040DB1D /* ChooseActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */; };
+		6C7722B015B1EB670040DB1D /* ChooseActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722AE15B1EB670040DB1D /* ChooseActivityViewController.xib */; };
+		6C7722BD15B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B315B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage.png */; };
+		6C7722BE15B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B415B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage@2x.png */; };
+		6C7722BF15B1F14D0040DB1D /* FeedCellIconImageBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B515B1F14D0040DB1D /* FeedCellIconImageBackplate.png */; };
+		6C7722C015B1F14D0040DB1D /* FeedCellIconImageBackplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B615B1F14D0040DB1D /* FeedCellIconImageBackplate@2x.png */; };
+		6C7722C115B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B715B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture.png */; };
+		6C7722C215B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B815B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture@2.png */; };
+		6C7722C315B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722B915B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage.png */; };
+		6C7722C415B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722BA15B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage@2x.png */; };
+		6C7722C515B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722BB15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator.png */; };
+		6C7722C615B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722BC15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png */; };
 		6C86658715AFA1A6004D932F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658515AFA1A6004D932F /* LoginViewController.m */; };
 		6C86658C15AFA1BB004D932F /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C86658A15AFA1BB004D932F /* SignUpViewController.m */; };
 		6C86658D15AFA1BB004D932F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C86658B15AFA1BB004D932F /* SignUpViewController.xib */; };
@@ -159,6 +171,19 @@
 		6C08845815B1C90A00670936 /* ChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
 		6C08845915B1C90A00670936 /* ChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
 		6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationViewController.xib; sourceTree = "<group>"; };
+		6C7722AC15B1EB670040DB1D /* ChooseActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseActivityViewController.h; sourceTree = "<group>"; };
+		6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseActivityViewController.m; sourceTree = "<group>"; };
+		6C7722AE15B1EB670040DB1D /* ChooseActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChooseActivityViewController.xib; path = Fitivity/ChooseActivityViewController.xib; sourceTree = "<group>"; };
+		6C7722B315B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeedCellActiveGroupActivityIconImage.png; sourceTree = "<group>"; };
+		6C7722B415B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedCellActiveGroupActivityIconImage@2x.png"; sourceTree = "<group>"; };
+		6C7722B515B1F14D0040DB1D /* FeedCellIconImageBackplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeedCellIconImageBackplate.png; sourceTree = "<group>"; };
+		6C7722B615B1F14D0040DB1D /* FeedCellIconImageBackplate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedCellIconImageBackplate@2x.png"; sourceTree = "<group>"; };
+		6C7722B715B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeedCellProfilePlaceholderPicture.png; sourceTree = "<group>"; };
+		6C7722B815B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedCellProfilePlaceholderPicture@2.png"; sourceTree = "<group>"; };
+		6C7722B915B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeedCellProposedGroupActivityIconImage.png; sourceTree = "<group>"; };
+		6C7722BA15B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedCellProposedGroupActivityIconImage@2x.png"; sourceTree = "<group>"; };
+		6C7722BB15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FeedCellWhiteDisclosureIndicator.png; sourceTree = "<group>"; };
+		6C7722BC15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedCellWhiteDisclosureIndicator@2.png"; sourceTree = "<group>"; };
 		6C86658415AFA1A6004D932F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6C86658515AFA1A6004D932F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6C86658915AFA1BB004D932F /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -349,6 +374,23 @@
 			name = GTM;
 			sourceTree = "<group>";
 		};
+		6C7722B215B1F1460040DB1D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C7722B315B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage.png */,
+				6C7722B415B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage@2x.png */,
+				6C7722B515B1F14D0040DB1D /* FeedCellIconImageBackplate.png */,
+				6C7722B615B1F14D0040DB1D /* FeedCellIconImageBackplate@2x.png */,
+				6C7722B715B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture.png */,
+				6C7722B815B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture@2.png */,
+				6C7722B915B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage.png */,
+				6C7722BA15B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage@2x.png */,
+				6C7722BB15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator.png */,
+				6C7722BC15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		6C86659E15AFA571004D932F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +503,7 @@
 		6CB1A74A15ACFC4100C0FF75 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6C7722B215B1F1460040DB1D /* Cells */,
 				6CC7FB2915AFB71D00D21AA9 /* Tab Bar */,
 				6CC7FB1815AFB67600D21AA9 /* Buttons */,
 				6C86659E15AFA571004D932F /* Login */,
@@ -609,6 +652,8 @@
 				6CDCD5B415B1ADE300986AA2 /* ActivityHomeViewController.m */,
 				6C08845815B1C90A00670936 /* ChooseLocationViewController.h */,
 				6C08845915B1C90A00670936 /* ChooseLocationViewController.m */,
+				6C7722AC15B1EB670040DB1D /* ChooseActivityViewController.h */,
+				6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -635,6 +680,7 @@
 			children = (
 				6CDCD5B515B1ADE300986AA2 /* ActivityHomeViewController.xib */,
 				6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */,
+				6C7722AE15B1EB670040DB1D /* ChooseActivityViewController.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -760,6 +806,17 @@
 				6CDCD5B715B1ADE300986AA2 /* ActivityHomeViewController.xib in Resources */,
 				6CDCD5BC15B1AE9700986AA2 /* UserProfileViewController.xib in Resources */,
 				6C08845D15B1D3D300670936 /* ChooseLocationViewController.xib in Resources */,
+				6C7722B015B1EB670040DB1D /* ChooseActivityViewController.xib in Resources */,
+				6C7722BD15B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage.png in Resources */,
+				6C7722BE15B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage@2x.png in Resources */,
+				6C7722BF15B1F14D0040DB1D /* FeedCellIconImageBackplate.png in Resources */,
+				6C7722C015B1F14D0040DB1D /* FeedCellIconImageBackplate@2x.png in Resources */,
+				6C7722C115B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture.png in Resources */,
+				6C7722C215B1F14D0040DB1D /* FeedCellProfilePlaceholderPicture@2.png in Resources */,
+				6C7722C315B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage.png in Resources */,
+				6C7722C415B1F14D0040DB1D /* FeedCellProposedGroupActivityIconImage@2x.png in Resources */,
+				6C7722C515B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator.png in Resources */,
+				6C7722C615B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +858,7 @@
 				6C08842115B1C58500670936 /* PullToRefreshTableViewController.m in Sources */,
 				6C08842215B1C58700670936 /* EGORefreshTableHeaderView.m in Sources */,
 				6C08845A15B1C90A00670936 /* ChooseLocationViewController.m in Sources */,
+				6C7722AF15B1EB670040DB1D /* ChooseActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

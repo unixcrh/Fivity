@@ -10,7 +10,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityHomeViewController : UIViewController
+#import "ChooseActivityViewController.h"
+#import "ChooseLocationViewController.h"
+
+@interface ActivityHomeViewController : UIViewController <ChooseActivityViewControllerDelegate, ChooseLocationViewControllerDelegate> {
+	BOOL hasPickedBoth;
+}
 
 - (IBAction)chooseActivity:(id)sender;
 - (IBAction)chooseLocation:(id)sender;

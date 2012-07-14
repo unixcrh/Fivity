@@ -8,11 +8,47 @@
 
 #import "StreamViewController.h"
 
+#define kFeedLimit	20
+
 @interface StreamViewController ()
 
 @end
 
 @implementation StreamViewController
+
+@synthesize feedTable;
+
+#pragma mark - Helper Methods
+
+- (void)handleQueryResults:(NSArray *)theResults {
+	for (PFObject *object in theResults) {
+		[fetchedQueryItems addObject:object];
+		[fetchedQueryItemsByObjectID setObject:object forKey:[object objectId]];
+	}
+	if ([fetchedQueryItems count] > 0) {
+		[feedTable reloadData];
+	}
+}
+
+- (void)attemptFeedQuery {
+	@synchronized(self) {
+		if (!query) {
+			query = [[PFQuery alloc] initWithClassName:@"FitivityFeedEntryItem"];
+			[query orderByDescending:@"updatedAt"];
+			[query whereKey:@"FitivityFeedEntryGeographicLocation" nearGeoPoint:userGeoPoint withinMiles:queryRadius];
+			[query setLimit:kFeedLimit];
+			[query findObjectsInBackgroundWithBlock:^(NSArray *results, NSError *error) {
+				if (error) {
+					UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Load Error" message:@"Could not load your feed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+					[alert show];
+				}
+				else {
+					[self handleQueryResults:results];
+				}
+			}];
+		}
+	}
+}
 
 #pragma mark - UITableViewDelegate 
 
@@ -24,12 +60,19 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+//	PFObject *temp = [fetchedQueryItems objectAtIndex:indexPath.row];
+//	cell.textLabel.text = [temp objectId];
+	
     return cell;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;//CHANGE TO DYNAMIC 
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1; 
 }
 
 #pragma mark - UITableViewDataSource 
@@ -51,8 +94,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+		
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+	fetchedQueryItems = [[NSMutableArray alloc] init];
+	fetchedQueryItemsByObjectID = [[NSMutableDictionary alloc] init];
 }
 
 - (void)viewDidUnload {

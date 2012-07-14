@@ -7,6 +7,9 @@
 //
 
 #import "ChooseLocationViewController.h"
+#import "SBJson.h"
+#import "GTMNSString+URLArguments.h"
+#import "GooglePlacesObject.h"
 
 @interface ChooseLocationViewController ()
 
@@ -38,11 +41,14 @@
 		NSRange range = [[location.name uppercaseString] rangeOfString:upString];
 		
         if (range.location != NSNotFound) {
-            NSLog(@"Hit");
+            
+#ifdef DEBUG
+			NSLog(@"Hit");
             
             NSLog(@"Location Name %@", location.name);
             NSLog(@"Search String %@", upString);
-            
+#endif
+			
             [locationsFilterResults addObject:location];
         }
 	}
@@ -58,17 +64,12 @@
     searchString = [[NSString alloc]initWithString:aSearchString];
     
     //What places to search for
-    NSString *searchLocations = [NSString stringWithFormat:@"%@|%@|%@|%@|%@|%@|%@|%@|%@", 
+    NSString *searchLocations = [NSString stringWithFormat:@"%@|%@|%@|%@|%@", 
                                  kCampground, 
                                  kChurch,
                                  kGym,
-                                 kHealth,
                                  kPark,
-                                 kStadium,
-                                 kMealDelivery,
-                                 kMealTakeaway,
-                                 kNightClub
-                                 ];
+                                 kStadium];
     
     
     [googlePlacesConnection getGoogleObjectsWithQuery:searchString 
@@ -173,9 +174,7 @@
 	
 	//UPDATED from locations to locationFilterResults
 	GooglePlacesObject *places = [locationsFilterResults objectAtIndex:selectedRowIndex.row];
-	
-	NSLog(@"Selected %@", [places reference]);
-	
+		
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -214,17 +213,12 @@
     currentLocation = newLocation;
     
     //What places to search for
-    NSString *searchLocations = [NSString stringWithFormat:@"%@|%@|%@|%@|%@|%@|%@|%@|%@", 
-                                 kBar, 
-                                 kRestaurant,
-                                 kCafe,
-                                 kBakery,
-                                 kFood,
-                                 kLodging,
-                                 kMealDelivery,
-                                 kMealTakeaway,
-                                 kNightClub
-                                 ];
+    NSString *searchLocations = [NSString stringWithFormat:@"%@|%@|%@|%@|%@", 
+                                 kCampground, 
+                                 kChurch,
+                                 kGym,
+                                 kPark,
+                                 kStadium];
     
     [googlePlacesConnection getGoogleObjects:CLLocationCoordinate2DMake(newLocation.coordinate.latitude, newLocation.coordinate.longitude) 
                                     andTypes:searchLocations];
@@ -232,8 +226,14 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error  {
-    NSLog(@"locationManager FAIL");
+	
+#ifdef DEBUG
     NSLog(@"%@", [error description]);
+#endif
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't Find You" 
+													message:@"We could not find your location to find places around you. Try again when you are in a better service area" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[alert show];
 }
 
 #pragma mark - NSURLConnections

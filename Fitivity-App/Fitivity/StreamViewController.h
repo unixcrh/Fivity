@@ -10,8 +10,18 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface StreamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+	
+	NSMutableArray *fetchedQueryItems;
+	NSMutableDictionary *fetchedQueryItemsByObjectID;
+	
+	CLLocationDistance queryRadius;
+	PFGeoPoint *userGeoPoint;
+	PFQuery *query;
 }
+
+@property (nonatomic, retain) IBOutlet UITableView *feedTable;
 
 @end

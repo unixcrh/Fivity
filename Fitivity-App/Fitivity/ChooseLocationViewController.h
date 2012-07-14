@@ -13,7 +13,13 @@
 #import "PullToRefreshTableViewController.h"
 #import "GooglePlacesConnection.h"
 
-@interface ChooseLocationViewController : PullToRefreshTableViewController <UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, GooglePlacesConnectionDelegate> {
+@protocol ChooseLocationViewControllerDelegate <NSObject>
+
+- (void)userPickedLocation:(GooglePlacesObject *)place;
+
+@end
+
+@interface ChooseLocationViewController : PullToRefreshTableViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate,  CLLocationManagerDelegate, GooglePlacesConnectionDelegate> {
 	
 	CLLocationManager		*locationManager;
 	CLLocation				*currentLocation;

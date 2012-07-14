@@ -8,6 +8,7 @@
 
 #import "ActivityHomeViewController.h"
 #import "ChooseLocationViewController.h"
+#import "ChooseActivityViewController.h"
 
 @interface ActivityHomeViewController ()
 
@@ -18,12 +19,29 @@
 #pragma mark - IBAction's 
 
 - (IBAction)chooseActivity:(id)sender {
-	
+	ChooseActivityViewController *activity = [[ChooseActivityViewController alloc] initWithNibName:@"ChooseActivityViewController" bundle:nil];
+	[self.navigationController pushViewController:activity animated:YES];
 }
 
 - (IBAction)chooseLocation:(id)sender {
 	ChooseLocationViewController *location = [[ChooseLocationViewController alloc] initWithNibName:@"ChooseLocationViewController" bundle:nil];
 	[self.navigationController pushViewController:location animated:YES];
+}
+
+#pragma mark - ChooseActivityViewController Delegate
+
+- (void)userPickedActivity:(NSString *)activityName {
+	if (hasPickedBoth) {
+		
+	}
+}
+
+#pragma mark - ChoosLocationViewController Delegate
+
+- (void)userPickedLocation:(GooglePlacesObject *)place {
+	if (hasPickedBoth) {
+		
+	}
 }
 
 #pragma mark - View Lifecycle
@@ -40,6 +58,7 @@
     [super viewDidLoad];
 
 	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+	hasPickedBoth = NO; //Nothing picked when loaded
 }
 
 - (void)viewDidUnload {

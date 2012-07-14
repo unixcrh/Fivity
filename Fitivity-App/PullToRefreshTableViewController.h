@@ -19,8 +19,8 @@
 	BOOL _reloading;
 }
 
-@property (nonatomic, retain) UITableView *tableView;
-@property (nonatomic, retain) UISearchBar *searchBar;
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
 @property(assign,getter=isReloading) BOOL reloading;
 @property(nonatomic,readonly) EGORefreshTableHeaderView *refreshHeaderView;
 

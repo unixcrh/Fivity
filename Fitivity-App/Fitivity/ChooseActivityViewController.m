@@ -1,22 +1,21 @@
 //
-//  UserProfileViewController.m
+//  ChooseActivityViewController.m
 //  Fitivity
 //
 //  Created by Nathaniel Doe on 7/14/12.
 //  Copyright (c) 2012 Fitivity. All rights reserved.
 //
 
-#import "UserProfileViewController.h"
+#import "ChooseActivityViewController.h"
 
-@interface UserProfileViewController ()
+@interface ChooseActivityViewController ()
 
 @end
 
-@implementation UserProfileViewController
+@implementation ChooseActivityViewController
 
-@synthesize groupsTable;
-@synthesize userNameLabel;
-@synthesize userPicture;
+@synthesize activitiesTable;
+@synthesize delegate;
 
 #pragma mark - UITableViewDelegate 
 
@@ -37,7 +36,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 1;
+	return 1;  //CHANGE TO QUERY VALUE OF ACTIVITY/CATEGORY COUNT
 }
 
 #pragma mark - UITableViewDataSource 
@@ -49,7 +48,7 @@
 
 #pragma mark - View Lifecycle
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -59,14 +58,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload {
-	[self setUserPicture:nil];
-	[self setUserNameLabel:nil];
-	[self setGroupsTable:nil];
+    [self setActivitiesTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
