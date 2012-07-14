@@ -9,13 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@class StreamViewController, OpeningLogoViewController;
+@class OpeningLogoViewController, FTabBarViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) OpeningLogoViewController *openingView;
-@property (strong, nonatomic) StreamViewController *streamView;
-@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) FTabBarViewController *tabBarView;
 
 @end

@@ -11,12 +11,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-#import "OpeningLogoViewController.h"
-#import "LoginViewController.h"
-
-@interface StreamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, OpeningLogoViewControllerDelegate> {
+@interface StreamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 }
-
-@property (nonatomic, retain) LoginViewController *loginView;
 
 @end

@@ -35,6 +35,13 @@
 #pragma mark - IBActions
 
 - (IBAction)signUp:(id)sender {
+	if (![[FConfig instance] connected]) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Connected" message:@"You must be connected to the internet to sign up!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		[alert show];
+		
+		return;
+	}
+	
 	SignUpViewController *signUpView = [[SignUpViewController alloc] initWithNibName:@"SignUpViewController" bundle:nil];
     [signUpView setDelegate:self];
 	[self presentModalViewController:signUpView animated:YES];
@@ -43,7 +50,14 @@
 
 - (IBAction)signIn:(id)sender {
 	@synchronized(self) {
-		NSString *username = [self.userNameField text];
+		if (![[FConfig instance] connected]) {
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Connected" message:@"You must be connected to the internet to sign in!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			[alert show];
+			
+			return;
+		}
+		
+		NSString *username = [[self.userNameField text] lowercaseString];
 		NSString *password = [self.passwordField text];
 		if (username && password) {
 			if ([username length] > 0 && [password length] > 0) {
@@ -68,6 +82,13 @@
 
 - (IBAction)signInWithFacebook:(id)sender {
 	@synchronized(self) {
+		if (![[FConfig instance] connected]) {
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Connected" message:@"You must be connected to the internet to sign up!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+			[alert show];
+			
+			return;
+		}
+		
 		[PFFacebookUtils logInWithPermissions:[[NSArray alloc] init] block:^(PFUser *user, NSError *error){
 			if (error || !user) {
 				NSString *errorMessage = @"Couldn't login due to unknown error.";

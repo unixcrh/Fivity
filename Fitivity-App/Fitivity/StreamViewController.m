@@ -7,38 +7,12 @@
 //
 
 #import "StreamViewController.h"
-#import "LoginViewController.h"
 
 @interface StreamViewController ()
 
 @end
 
 @implementation StreamViewController
-
-@synthesize loginView;
-
-#pragma mark - OpeningLogoViewController Delegate
-
-//	Once the logo is annimated into the place the login controller will be
-//	we fade in the login view controller.
--(void)viewHasFinishedAnnimating:(OpeningLogoViewController *)view {	
-	[self dismissModalViewControllerAnimated:YES];
-}
-
-#pragma mark - Helper Methods
-
-- (void)login {
-	if ([[FConfig instance] shouldLogIn]) {
-		if (!loginView) {
-			loginView = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-		}
-		[self presentModalViewController:loginView animated:YES];
-	}
-}
-
-- (void)dismissChildView {
-	[self dismissModalViewControllerAnimated:NO];
-}
 
 #pragma mark - UITableViewDelegate 
 
@@ -75,22 +49,15 @@
     return self;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    if ([PFUser currentUser] == nil) {
-        [self login];
-    } 
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissChildView) name:@"signedIn" object: nil];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -7,44 +7,45 @@
 //
 
 #import "AppDelegate.h"
+#import "FTabBarViewController.h"
 #import "OpeningLogoViewController.h"
 #import "StreamViewController.h"
+#import "ActivityHomeViewController.h"
+#import "UserProfileViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize openingView = _openingView;
-@synthesize streamView = _streamView;
-@synthesize tabBarController = _tabBarController;
+@synthesize tabBarView = _tabBarView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setAutoresizesSubviews:YES];
     
-	//Initialize the first two view controllers
+	//Initialize the main view controllers
 	self.openingView = [[OpeningLogoViewController alloc] initWithNibName:@"OpeningLogoViewController" bundle:nil];
-	self.streamView = [[StreamViewController alloc] initWithNibName:@"StreamViewController" bundle:nil];
+	StreamViewController *streamView = [[StreamViewController alloc] initWithNibName:@"StreamViewController" bundle:nil];
+	ActivityHomeViewController *activity = [[ActivityHomeViewController alloc] initWithNibName:@"ActivityHomeViewController" bundle:nil];
+	UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
+	self.tabBarView = [[FTabBarViewController alloc] initWithLeftRootViewController:streamView centerRootViewController:activity rightRootViewController:profile];
 	
-	[self.openingView setDelegate:self.streamView];
+	[self.openingView setDelegate:self.tabBarView];
 	
 	//Configure the Navigation Bar Controller
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.streamView];
-	[navController.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackplate"] forBarMetrics:UIBarMetricsDefault];
-	
-	//Configure the Tab Bar Controller
-	self.tabBarController = [[UITabBarController alloc] init];
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:navController, nil];
+//	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:streamView];
+//	[navController.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackplate"] forBarMetrics:UIBarMetricsDefault];
 	
 	//Set up parse credentials 
 	[Parse setApplicationId:[[FConfig instance] getParseAppID] clientKey:[[FConfig instance] getParseClientKey]];
 	[PFFacebookUtils initializeWithApplicationId:[[FConfig instance] getFacebookAppID]];
 	
-	self.window.rootViewController = self.tabBarController;
+	self.window.rootViewController = self.tabBarView;
 	self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 	
 	//Present the opening view
-	[self.streamView presentModalViewController:self.openingView animated:NO];
+	[self.tabBarView presentModalViewController:self.openingView animated:NO];
 	
     return YES;
 }

@@ -86,7 +86,7 @@
 //After input has been validated, we can now sign the user up
 - (void)signUp {
 	PFUser *attemptedUser = [[PFUser alloc] init];
-	[attemptedUser setUsername:self.userNameField.text];
+	[attemptedUser setUsername:[self.userNameField.text lowercaseString]];
 	[attemptedUser setPassword:self.passwordField.text];
 	[attemptedUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 		if (error || !succeeded) {
