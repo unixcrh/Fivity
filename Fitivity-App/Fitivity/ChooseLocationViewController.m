@@ -10,6 +10,7 @@
 #import "SBJson.h"
 #import "GTMNSString+URLArguments.h"
 #import "GooglePlacesObject.h"
+#import "LocationMapViewController.h"
 
 @interface ChooseLocationViewController ()
 
@@ -124,6 +125,14 @@
     [super dataSourceDidFinishLoadingNewData];
 }
 
+#pragma mark - ChooseLocationCell Delegate 
+
+- (void)openMapForCell:(ChooseLocationCell *)cell {
+	NSLog(@"Pushed");
+	LocationMapViewController *map = [[LocationMapViewController alloc] initWithNibName:@"LocationMapViewController" bundle:nil place:[cell place]];
+	[self.navigationController pushViewController:map animated:YES];
+}
+
 #pragma mark - TableView data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView {
@@ -140,34 +149,32 @@
 	static NSString *CellIdentifier = @"LocationCell";
 	
 	// Dequeue or create a cell of the appropriate type.
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	ChooseLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell                = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ChooseLocationCell" owner:self options:nil];
+		cell = [nib objectAtIndex:0];
     }
     
     // Get the object to display and set the value in the cell.    
-    GooglePlacesObject *place     = [[GooglePlacesObject alloc] init];
+    GooglePlacesObject *place = [[GooglePlacesObject alloc] init];
+	place = [locationsFilterResults objectAtIndex:[indexPath row]];
     
-    //UPDATED from locations to locationFilter results
-    place                       = [locationsFilterResults objectAtIndex:[indexPath row]];
-    
-    cell.textLabel.text                         = place.name;
-    cell.textLabel.adjustsFontSizeToFitWidth    = YES;
-	cell.textLabel.font                         = [UIFont systemFontOfSize:12.0];
-	cell.textLabel.minimumFontSize              = 10;
-	cell.textLabel.numberOfLines                = 4;
-	cell.textLabel.lineBreakMode                = UILineBreakModeWordWrap;
-    cell.textLabel.textColor                    = [UIColor colorWithRed:0.0 green:128.0/255.0 blue:0.0 alpha:1.0];
-    cell.textLabel.textAlignment                = UITextAlignmentLeft;
+    cell.locationLabel.text = place.name;
+    cell.locationLabel.adjustsFontSizeToFitWidth = YES;
     
     //You can use place.distanceInMilesString or place.distanceInFeetString.  
     //You can add logic that if distanceInMilesString starts with a 0. then use Feet otherwise use Miles.
-    cell.detailTextLabel.text                   = [NSString stringWithFormat:@"%@ - Distance %@ miles", place.vicinity, place.distanceInMilesString];
-    cell.detailTextLabel.textColor              = [UIColor darkGrayColor];
-    cell.detailTextLabel.font                   = [UIFont systemFontOfSize:10.0];
+    cell.distanceLabel.text = [NSString stringWithFormat:@"Distance: %@ miles", place.distanceInMilesString];
+    cell.distanceLabel.textColor = [UIColor darkGrayColor];
+	
+	[cell setPlace:place];
+	[cell setDelegate:self];
 	
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 91.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

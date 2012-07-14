@@ -12,6 +12,7 @@
 
 #import "PullToRefreshTableViewController.h"
 #import "GooglePlacesConnection.h"
+#import "ChooseLocationCell.h"
 
 @protocol ChooseLocationViewControllerDelegate <NSObject>
 
@@ -19,7 +20,7 @@
 
 @end
 
-@interface ChooseLocationViewController : PullToRefreshTableViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate,  CLLocationManagerDelegate, GooglePlacesConnectionDelegate> {
+@interface ChooseLocationViewController : PullToRefreshTableViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate,  CLLocationManagerDelegate, GooglePlacesConnectionDelegate, ChooseLocationCellDelegate> {
 	
 	CLLocationManager		*locationManager;
 	CLLocation				*currentLocation;
