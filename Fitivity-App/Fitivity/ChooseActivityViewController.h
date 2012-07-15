@@ -11,13 +11,15 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+#import "ChooseActivityHeaderView.h"
+
 @protocol ChooseActivityViewControllerDelegate <NSObject>
 
 - (void)userPickedActivity:(NSString *)activityName;
 
 @end
 
-@interface ChooseActivityViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface ChooseActivityViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ChooseActivityHeaderViewDelegate> {
 	PFQuery *query;
 	NSMutableArray *categoryArray, *categories;;
 }

@@ -151,6 +151,7 @@
 		6CDCD5D415B1B05400986AA2 /* ApplicationProfileTabSelectedPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB4315AFB72500D21AA9 /* ApplicationProfileTabSelectedPushed@2x.png */; };
 		6CDCD5D515B1B05400986AA2 /* ApplicationTabBarBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB4415AFB72500D21AA9 /* ApplicationTabBarBackplate.png */; };
 		6CDCD5D615B1B05400986AA2 /* ApplicationTabBarBackplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB4515AFB72500D21AA9 /* ApplicationTabBarBackplate@2x.png */; };
+		6CEFED8015B3641500211CB0 /* ChooseActivityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFED7F15B3641500211CB0 /* ChooseActivityHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -338,6 +339,8 @@
 		6CDCD5B815B1AE9700986AA2 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
 		6CDCD5B915B1AE9700986AA2 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		6CDCD5BA15B1AE9700986AA2 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserProfileViewController.xib; path = Fitivity/UserProfileViewController.xib; sourceTree = "<group>"; };
+		6CEFED7E15B3641500211CB0 /* ChooseActivityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseActivityHeaderView.h; sourceTree = "<group>"; };
+		6CEFED7F15B3641500211CB0 /* ChooseActivityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseActivityHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +474,8 @@
 			children = (
 				6C7722C815B2096B0040DB1D /* ChooseLocationCell.h */,
 				6C7722C915B2096B0040DB1D /* ChooseLocationCell.m */,
+				6CEFED7E15B3641500211CB0 /* ChooseActivityHeaderView.h */,
+				6CEFED7F15B3641500211CB0 /* ChooseActivityHeaderView.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -997,6 +1002,7 @@
 				6C7722CA15B2096B0040DB1D /* ChooseLocationCell.m in Sources */,
 				6CA138CF15B21C8600C1E1EC /* LocationMapViewController.m in Sources */,
 				6CA138D715B21E8F00C1E1EC /* MapPin.m in Sources */,
+				6CEFED8015B3641500211CB0 /* ChooseActivityHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

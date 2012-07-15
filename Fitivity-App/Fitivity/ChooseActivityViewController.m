@@ -8,6 +8,8 @@
 
 #import "ChooseActivityViewController.h"
 
+#define kHeaderHeight	70
+
 @interface ChooseActivityViewController ()
 
 @end
@@ -69,6 +71,16 @@
 	}
 }
 
+#pragma mark - ChooseActivityHeaderView Delegate 
+
+-(void)sectionHeaderView:(ChooseActivityHeaderView *)sectionHeaderView sectionOpened:(NSInteger)section {
+	
+}
+
+-(void)sectionHeaderView:(ChooseActivityHeaderView *)sectionHeaderView sectionClosed:(NSInteger)section {
+	
+}
+
 #pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -85,6 +97,23 @@
     return cell;
 }
 
+- (UIView*)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section { 
+	NSString *title = @"";
+	if ([categories count] > 0) {
+		PFObject *firstObject = [(NSMutableArray *)[categories objectAtIndex:section] objectAtIndex:0];
+		
+		title = [firstObject objectForKey:@"category"];
+	}
+	
+	ChooseActivityHeaderView *header = [[ChooseActivityHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.activitiesTable.bounds.size.width, kHeaderHeight) 
+																		title:title section:section];
+	[header setDelegate:self];
+	return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+	return kHeaderHeight;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [(NSMutableArray *)[categories objectAtIndex:section] count];
@@ -92,17 +121,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return [categories count];  
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	
-	if ([categories count] > 0) {
-		PFObject *firstObject = [(NSMutableArray *)[categories objectAtIndex:section] objectAtIndex:0];
-		
-		return [firstObject objectForKey:@"category"];
-	}
-	
-	return @"";
 }
 
 #pragma mark - UITableViewDelegate 
@@ -124,17 +142,15 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        categoryArray = [[NSMutableArray alloc] init];
+		categories = [[NSMutableArray alloc] init];
+		[self attemptQuery];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-	categoryArray = [[NSMutableArray alloc] init];
-	categories = [[NSMutableArray alloc] init];
-	[self attemptQuery];
 }
 
 - (void)viewDidUnload {
