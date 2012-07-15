@@ -10,7 +10,7 @@
 
 #define kLabelIndent		10
 #define kImageBackIndent	30
-#define kImageYIndent		20
+#define kImageYIndent		30
 
 @implementation ChooseActivityHeaderView
 
@@ -45,7 +45,7 @@
 		[openCloseIcon setImage:[UIImage imageNamed:@"CategoryCellClosedIcon.png"]];
 		[self addSubview:openCloseIcon];
 		
-		sectionOpen = NO;
+		sectionOpen = YES; //Set to YES initially so that the icon changes to the correct open one.
     }
     return self;
 }

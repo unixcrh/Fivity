@@ -8,7 +8,7 @@
 
 #import "ChooseActivityViewController.h"
 
-#define kHeaderHeight	70
+#define kHeaderHeight	92
 
 @interface ChooseActivityViewController ()
 
@@ -116,7 +116,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [(NSMutableArray *)[categories objectAtIndex:section] count];
+    return 0;//[(NSMutableArray *)[categories objectAtIndex:section] count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
