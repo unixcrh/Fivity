@@ -15,7 +15,9 @@
 }
 
 
--(void)toggleOpenWithUserAction:(BOOL)userAction;
+- (void)toggleOpenWithUserAction:(BOOL)userAction;
+- (void)setSectionOpen:(BOOL)open;
+
 - (id)initWithFrame:(CGRect)frame title:(NSString *)title section:(NSInteger)section;
 
 @property (nonatomic, retain) UILabel *titleLable;

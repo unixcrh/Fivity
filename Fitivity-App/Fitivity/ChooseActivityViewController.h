@@ -21,7 +21,7 @@
 
 @interface ChooseActivityViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ChooseActivityHeaderViewDelegate> {
 	PFQuery *query;
-	NSMutableArray *categoryArray, *categories;
+	NSMutableArray *categories, *resultsToShow;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *activitiesTable;

@@ -45,7 +45,7 @@
 		[openCloseIcon setImage:[UIImage imageNamed:@"CategoryCellClosedIcon.png"]];
 		[self addSubview:openCloseIcon];
 		
-		sectionOpen = YES; //Set to YES initially so that the icon changes to the correct open one.
+		sectionOpen = NO; 
     }
     return self;
 }
@@ -54,21 +54,24 @@
     [self toggleOpenWithUserAction:YES];
 }
 
+- (void)setSectionOpen:(BOOL)open {
+	sectionOpen = open;
+}
+
 -(void)toggleOpenWithUserAction:(BOOL)userAction {
-	sectionOpen = !sectionOpen;
 	
 	if (userAction) {
-		if (sectionOpen) {
+		if (!sectionOpen) {
 			if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionOpened:)]) {
                 [self.delegate sectionHeaderView:self sectionOpened:self.section];
             }
-			[openCloseIcon setImage:[UIImage imageNamed:@"CategoryCellClosedIcon.png"]];
+			[openCloseIcon setImage:[UIImage imageNamed:@"CategoryCellExpandedIcon.png"]];
 		}
 		else {
 			if ([self.delegate respondsToSelector:@selector(sectionHeaderView:sectionClosed:)]) {
                 [self.delegate sectionHeaderView:self sectionClosed:self.section];
             }
-			[openCloseIcon setImage:[UIImage imageNamed:@"CategoryCellExpandedIcon.png"]];
+			[openCloseIcon setImage:[UIImage imageNamed:@"CategoryCellClosedIcon.png"]];
 		}
 		
 	}

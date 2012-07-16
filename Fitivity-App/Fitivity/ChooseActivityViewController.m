@@ -33,6 +33,7 @@
 			[query whereKeyExists:@"category"];
 			[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 				
+				NSMutableArray *categoryArray = [[NSMutableArray alloc] init];
 				if (!error) {
 					NSString *lastCategory = @"";
 					BOOL firstTry = YES;
@@ -59,7 +60,13 @@
 					}
 					[categories addObject:categoryArray];	//Need to add the last category
 					categoryArray = nil;					//Clean up
-
+					
+					//Since we don't show any results at first (just headers) initialize the results array to have
+					//as many empty arrays as there are categories. These arrays get updated in the header delegate methods.
+					for (int i = 0; i < [categories count]; i++) {
+						[resultsToShow addObject:[[NSMutableArray alloc] init]];
+					}
+					
 					[activitiesTable reloadData];
 				}
 				else {
@@ -75,10 +82,36 @@
 
 -(void)sectionHeaderView:(ChooseActivityHeaderView *)sectionHeaderView sectionOpened:(NSInteger)section {
 	
+	//Create an array containing the index paths of the rows to insert: These correspond to the rows for each quotation in the current section.
+    NSInteger countOfRowsToInsert = [(NSMutableArray *)[categories objectAtIndex:section] count];
+    NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < countOfRowsToInsert; i++) {
+        [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:i inSection:section]];
+    }
+	
+	[resultsToShow replaceObjectAtIndex:section withObject:[categories objectAtIndex:section]];
+	[sectionHeaderView setSectionOpen:YES];
+	
+	UITableViewRowAnimation insertAnimation = UITableViewRowAnimationTop;
+	[self.activitiesTable beginUpdates];
+	[self.activitiesTable insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:insertAnimation];
+	[self.activitiesTable endUpdates];
 }
 
 -(void)sectionHeaderView:(ChooseActivityHeaderView *)sectionHeaderView sectionClosed:(NSInteger)section {
 	
+	//Create an array of the index paths of the rows in the section that was closed, then delete those rows from the table view
+	NSInteger countOfRowsToDelete = [(NSMutableArray *)[resultsToShow objectAtIndex:section] count];
+	[resultsToShow replaceObjectAtIndex:section withObject:[[NSMutableArray alloc] init]];
+	[sectionHeaderView setSectionOpen:NO];
+	
+	if (countOfRowsToDelete > 0) {
+        NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
+            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:section]];
+        }
+        [self.activitiesTable deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationTop];
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -115,8 +148,8 @@
 	return kHeaderHeight;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;//[(NSMutableArray *)[categories objectAtIndex:section] count];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
+	return [(NSMutableArray *)[resultsToShow objectAtIndex:section] count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -142,8 +175,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        categoryArray = [[NSMutableArray alloc] init];
 		categories = [[NSMutableArray alloc] init];
+		resultsToShow = [[NSMutableArray alloc] init];
 		[self attemptQuery];
     }
     return self;
