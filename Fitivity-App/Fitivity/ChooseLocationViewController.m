@@ -12,6 +12,8 @@
 #import "GooglePlacesObject.h"
 #import "LocationMapViewController.h"
 
+#define kCellHeight     91.0f
+
 @interface ChooseLocationViewController ()
 
 @end
@@ -174,7 +176,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 91.0f;
+	return kCellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

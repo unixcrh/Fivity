@@ -7,8 +7,10 @@
 //
 
 #import "StreamViewController.h"
+#import "DiscoverCell.h"
 
-#define kFeedLimit	20
+#define kFeedLimit      20
+#define kCellHeight     92.0f
 
 @interface StreamViewController ()
 
@@ -55,10 +57,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    DiscoverCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DiscoverCell" owner:self options:nil];
+		cell = [nib objectAtIndex:0];
     }
+    
+    [cell.imageView setImage:[UIImage imageNamed:@"FeedCellActiveGroupActivityIconImage.png"]];
+    [cell.timeLabel setText:@"3:45 PM"];
+    [cell.titleLabel setText:@"6 people are doing"];
+    [cell.activityLabel setText:@"Basketball at YMCA"];
+    [cell.milesAwayLabel setText:@"3.4 Miles"];
     
 //	PFObject *temp = [fetchedQueryItems objectAtIndex:indexPath.row];
 //	cell.textLabel.text = [temp objectId];
@@ -66,6 +75,9 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return kCellHeight;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;//CHANGE TO DYNAMIC 

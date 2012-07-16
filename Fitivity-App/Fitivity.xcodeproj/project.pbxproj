@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5700D1B715B470D4003C96F3 /* DiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700D1B615B470D4003C96F3 /* DiscoverCell.m */; };
+		5700D1BA15B47107003C96F3 /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5700D1B915B47107003C96F3 /* DiscoverCell.xib */; };
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
 		6C08842115B1C58500670936 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08841E15B1C58100670936 /* PullToRefreshTableViewController.m */; };
@@ -155,6 +157,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5700D1B515B470D4003C96F3 /* DiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCell.h; sourceTree = "<group>"; };
+		5700D1B615B470D4003C96F3 /* DiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCell.m; sourceTree = "<group>"; };
+		5700D1B915B47107003C96F3 /* DiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverCell.xib; sourceTree = "<group>"; };
 		57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
 		57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6C08841D15B1C58100670936 /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullToRefreshTableViewController.h; sourceTree = "<group>"; };
@@ -366,6 +371,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5700D1B315B470A7003C96F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5700D1B515B470D4003C96F3 /* DiscoverCell.h */,
+				5700D1B615B470D4003C96F3 /* DiscoverCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		5700D1B815B470F7003C96F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5700D1B915B47107003C96F3 /* DiscoverCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		6C08841B15B1C56000670936 /* Google Places */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +770,7 @@
 		6CDCD5AC15B1AD9300986AA2 /* Discover Stream */ = {
 			isa = PBXGroup;
 			children = (
+				5700D1B315B470A7003C96F3 /* Cells */,
 				6CA2691C15AE2FB900CD205C /* StreamViewController.h */,
 				6CA2691D15AE2FB900CD205C /* StreamViewController.m */,
 			);
@@ -804,6 +827,7 @@
 		6CDCD5B215B1ADC200986AA2 /* Discover Stream */ = {
 			isa = PBXGroup;
 			children = (
+				5700D1B815B470F7003C96F3 /* Cells */,
 				6CA2691E15AE2FB900CD205C /* StreamViewController.xib */,
 			);
 			name = "Discover Stream";
@@ -957,6 +981,7 @@
 				6C77230315B20F340040DB1D /* LocationCellIconImage.png in Resources */,
 				6C77230415B20F340040DB1D /* LocationCellIconImage@2x.png in Resources */,
 				6CA138D015B21C8600C1E1EC /* LocationMapViewController.xib in Resources */,
+				5700D1BA15B47107003C96F3 /* DiscoverCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1028,7 @@
 				6CA138CF15B21C8600C1E1EC /* LocationMapViewController.m in Sources */,
 				6CA138D715B21E8F00C1E1EC /* MapPin.m in Sources */,
 				6CEFED8015B3641500211CB0 /* ChooseActivityHeaderView.m in Sources */,
+				5700D1B715B470D4003C96F3 /* DiscoverCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
