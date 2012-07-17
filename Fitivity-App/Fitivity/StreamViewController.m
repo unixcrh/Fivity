@@ -8,6 +8,8 @@
 
 #import "StreamViewController.h"
 #import "DiscoverCell.h"
+#import "OHAttributedLabel.h"
+#import "NSAttributedString+Attributes.h"
 
 #define kFeedLimit      20
 #define kCellHeight     92.0f

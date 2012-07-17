@@ -274,7 +274,9 @@ BOOL CTRunContainsCharactersFromStringRange(CTRunRef run, NSRange range) {
 		 @catch (NSException * e) {
 			 // Protection against NSRangeException
 			 if ([[e name] isEqualToString:NSRangeException]) {
+#ifdef DEBUG
 				 NSLog(@"[OHAttributedLabel] exception: %@",e);
+#endif
 			 } else {
 				 @throw;
 			 }
@@ -632,15 +634,19 @@ BOOL CTRunContainsCharactersFromStringRange(CTRunRef run, NSRange range) {
 	|| (self.lineBreakMode == UILineBreakModeMiddleTruncation)
 	|| (self.lineBreakMode == UILineBreakModeTailTruncation);
 	if (truncationMode) {
+#ifdef DEBUG
 		NSLog(@"[OHAttributedLabel] Warning: \"UILineBreakMode...Truncation\" lineBreakModes not yet fully supported by CoreText and OHAttributedLabel");
 		NSLog(@"                    (truncation will appear on each paragraph instead of the whole text)");
 		NSLog(@"                    This is a known issue (Help to solve this would be greatly appreciated).");
 		NSLog(@"                    See https://github.com/AliSoftware/OHAttributedLabel/issues/3");
+#endif
 	}
 }
 -(void)warnAboutKnownIssues_CheckAdjustsFontSizeToFitWidth {
 	if (self.adjustsFontSizeToFitWidth) {
+#ifdef DEBUG
 		NSLog(@"[OHAttributedLabel] Warning: \"adjustsFontSizeToFitWidth\" property not supported by CoreText and OHAttributedLabel! This property will be ignored.");
+#endif
 	}	
 }
 -(void)setAdjustsFontSizeToFitWidth:(BOOL)value {
@@ -649,9 +655,11 @@ BOOL CTRunContainsCharactersFromStringRange(CTRunRef run, NSRange range) {
 }
 
 -(void)setNumberOfLines:(NSInteger)nbLines {
+#ifdef DEBUG
 	NSLog(@"[OHAttributedLabel] Warning: the numberOfLines property is not yet supported by CoreText and OHAttributedLabel. (this property is ignored right now)");
 	NSLog(@"                    This is a known issue (Help to solve this would be greatly appreciated).");
 	NSLog(@"                    See https://github.com/AliSoftware/OHAttributedLabel/issues/34");
+#endif
 
 	[super setNumberOfLines:nbLines];
 }

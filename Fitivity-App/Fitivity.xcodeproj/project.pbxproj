@@ -11,8 +11,8 @@
 		5700D1BA15B47107003C96F3 /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5700D1B915B47107003C96F3 /* DiscoverCell.xib */; };
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
-		57E9C05615B5CA74007C7C58 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C05315B5CA6E007C7C58 /* NSAttributedString+Attributes.m */; };
-		57E9C05715B5CA77007C7C58 /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C05515B5CA6E007C7C58 /* OHAttributedLabel.m */; };
+		57E9C05615B5CA74007C7C58 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C05315B5CA6E007C7C58 /* NSAttributedString+Attributes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
+		57E9C05715B5CA77007C7C58 /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C05515B5CA6E007C7C58 /* OHAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
 		57E9C05915B5CA9C007C7C58 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E9C05815B5CA9C007C7C58 /* CoreText.framework */; };
 		6C08842115B1C58500670936 /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08841E15B1C58100670936 /* PullToRefreshTableViewController.m */; };
 		6C08842215B1C58700670936 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08842015B1C58100670936 /* EGORefreshTableHeaderView.m */; };
@@ -403,7 +403,7 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		57E9C05015B5CA64007C7C58 /* New Group */ = {
+		57E9C05015B5CA64007C7C58 /* OHAttributedString */ = {
 			isa = PBXGroup;
 			children = (
 				57E9C05215B5CA6E007C7C58 /* NSAttributedString+Attributes.h */,
@@ -411,7 +411,7 @@
 				57E9C05415B5CA6E007C7C58 /* OHAttributedLabel.h */,
 				57E9C05515B5CA6E007C7C58 /* OHAttributedLabel.m */,
 			);
-			name = "New Group";
+			name = OHAttributedString;
 			sourceTree = "<group>";
 		};
 		6C08841B15B1C56000670936 /* Google Places */ = {
@@ -596,7 +596,7 @@
 		6CB1A71615ACFC1D00C0FF75 = {
 			isa = PBXGroup;
 			children = (
-				57E9C05015B5CA64007C7C58 /* New Group */,
+				57E9C05015B5CA64007C7C58 /* OHAttributedString */,
 				6C08841B15B1C56000670936 /* Google Places */,
 				6CB1A72B15ACFC1D00C0FF75 /* Fitivity */,
 				6CB1A74A15ACFC4100C0FF75 /* Images */,

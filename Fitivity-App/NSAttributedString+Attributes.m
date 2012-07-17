@@ -137,7 +137,9 @@
 			CFRelease(newFont);
 		} else {
 			NSString* fontName = [(NSString*)CTFontCopyFullName(currentFont) autorelease];
+#ifdef DEBUG
 			NSLog(@"[OHAttributedLabel] Warning: can't find a bold font variant for font %@. Try another font family (like Helvetica) instead.",fontName);
+#endif
 		}
 		////[self removeAttribute:(NSString*)kCTFontWeightTrait range:fontRange]; // Work around for Apple leak
 		////[self addAttribute:(NSString*)kCTFontWeightTrait value:(id)[NSNumber numberWithInt:1.0f] range:fontRange];
