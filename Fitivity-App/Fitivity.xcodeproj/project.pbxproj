@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5700D1B715B470D4003C96F3 /* DiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5700D1B615B470D4003C96F3 /* DiscoverCell.m */; };
 		5700D1BA15B47107003C96F3 /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5700D1B915B47107003C96F3 /* DiscoverCell.xib */; };
+		575AECA415B6051200324958 /* GroupPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575AECA215B6051200324958 /* GroupPageViewController.m */; };
+		575AECA515B6051200324958 /* GroupPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575AECA315B6051200324958 /* GroupPageViewController.xib */; };
+		575AECA915B606FD00324958 /* ProposeActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575AECA715B606FD00324958 /* ProposeActivityViewController.m */; };
+		575AECAA15B606FD00324958 /* ProposeActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575AECA815B606FD00324958 /* ProposeActivityViewController.xib */; };
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
 		57E9C05615B5CA74007C7C58 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C05315B5CA6E007C7C58 /* NSAttributedString+Attributes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
@@ -166,6 +170,12 @@
 		5700D1B515B470D4003C96F3 /* DiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCell.h; sourceTree = "<group>"; };
 		5700D1B615B470D4003C96F3 /* DiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCell.m; sourceTree = "<group>"; };
 		5700D1B915B47107003C96F3 /* DiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverCell.xib; sourceTree = "<group>"; };
+		575AECA115B6051200324958 /* GroupPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupPageViewController.h; sourceTree = "<group>"; };
+		575AECA215B6051200324958 /* GroupPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupPageViewController.m; sourceTree = "<group>"; };
+		575AECA315B6051200324958 /* GroupPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupPageViewController.xib; path = Fitivity/GroupPageViewController.xib; sourceTree = "<group>"; };
+		575AECA615B606FD00324958 /* ProposeActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProposeActivityViewController.h; sourceTree = "<group>"; };
+		575AECA715B606FD00324958 /* ProposeActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProposeActivityViewController.m; sourceTree = "<group>"; };
+		575AECA815B606FD00324958 /* ProposeActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProposeActivityViewController.xib; path = Fitivity/ProposeActivityViewController.xib; sourceTree = "<group>"; };
 		57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
 		57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		57E9C05215B5CA6E007C7C58 /* NSAttributedString+Attributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Attributes.h"; sourceTree = "<group>"; };
@@ -401,6 +411,17 @@
 				5700D1B915B47107003C96F3 /* DiscoverCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		575AEC9F15B604F200324958 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6CA138CC15B21C8600C1E1EC /* LocationMapViewController.h */,
+				6CA138CD15B21C8600C1E1EC /* LocationMapViewController.m */,
+				6CA138D515B21E8B00C1E1EC /* MapPin.h */,
+				6CA138D615B21E8B00C1E1EC /* MapPin.m */,
+			);
+			name = "Helper Classes";
 			sourceTree = "<group>";
 		};
 		57E9C05015B5CA64007C7C58 /* OHAttributedString */ = {
@@ -804,6 +825,8 @@
 				5700D1B315B470A7003C96F3 /* Cells */,
 				6CA2691C15AE2FB900CD205C /* StreamViewController.h */,
 				6CA2691D15AE2FB900CD205C /* StreamViewController.m */,
+				575AECA115B6051200324958 /* GroupPageViewController.h */,
+				575AECA215B6051200324958 /* GroupPageViewController.m */,
 			);
 			name = "Discover Stream";
 			sourceTree = "<group>";
@@ -811,6 +834,7 @@
 		6CDCD5AE15B1AD9E00986AA2 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				575AEC9F15B604F200324958 /* Helper Classes */,
 				6C7722C715B209500040DB1D /* Cells */,
 				6CDCD5B315B1ADE300986AA2 /* ActivityHomeViewController.h */,
 				6CDCD5B415B1ADE300986AA2 /* ActivityHomeViewController.m */,
@@ -818,10 +842,8 @@
 				6C08845915B1C90A00670936 /* ChooseLocationViewController.m */,
 				6C7722AC15B1EB670040DB1D /* ChooseActivityViewController.h */,
 				6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */,
-				6CA138CC15B21C8600C1E1EC /* LocationMapViewController.h */,
-				6CA138CD15B21C8600C1E1EC /* LocationMapViewController.m */,
-				6CA138D515B21E8B00C1E1EC /* MapPin.h */,
-				6CA138D615B21E8B00C1E1EC /* MapPin.m */,
+				575AECA615B606FD00324958 /* ProposeActivityViewController.h */,
+				575AECA715B606FD00324958 /* ProposeActivityViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -851,6 +873,7 @@
 				6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */,
 				6C7722AE15B1EB670040DB1D /* ChooseActivityViewController.xib */,
 				6CA138CE15B21C8600C1E1EC /* LocationMapViewController.xib */,
+				575AECA815B606FD00324958 /* ProposeActivityViewController.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -860,6 +883,7 @@
 			children = (
 				5700D1B815B470F7003C96F3 /* Cells */,
 				6CA2691E15AE2FB900CD205C /* StreamViewController.xib */,
+				575AECA315B6051200324958 /* GroupPageViewController.xib */,
 			);
 			name = "Discover Stream";
 			sourceTree = "<group>";
@@ -1016,6 +1040,8 @@
 				6CF2C70F15B4EAF9001E3353 /* Icon.png in Resources */,
 				6CF2C71015B4EAF9001E3353 /* Icon@2x.png in Resources */,
 				6CF2C71115B4EAF9001E3353 /* FitivityIcon.png in Resources */,
+				575AECA515B6051200324958 /* GroupPageViewController.xib in Resources */,
+				575AECAA15B606FD00324958 /* ProposeActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1065,6 +1091,8 @@
 				6CA138D715B21E8F00C1E1EC /* MapPin.m in Sources */,
 				6CEFED8015B3641500211CB0 /* ChooseActivityHeaderView.m in Sources */,
 				5700D1B715B470D4003C96F3 /* DiscoverCell.m in Sources */,
+				575AECA415B6051200324958 /* GroupPageViewController.m in Sources */,
+				575AECA915B606FD00324958 /* ProposeActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
