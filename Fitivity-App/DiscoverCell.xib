@@ -155,7 +155,6 @@
 								<string key="NSFrame">{{254, 73}, {60, 15}}</string>
 								<reference key="NSSuperview" ref="656576455"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -353,7 +352,7 @@
 					<string key="className">DiscoverCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="activityLabel">UILabel</string>
+						<string key="activityLabel">OHAttributedLabel</string>
 						<string key="milesAwayLabel">UILabel</string>
 						<string key="pictureView">UIImageView</string>
 						<string key="timeLabel">UILabel</string>
@@ -362,7 +361,7 @@
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="activityLabel">
 							<string key="name">activityLabel</string>
-							<string key="candidateClassName">UILabel</string>
+							<string key="candidateClassName">OHAttributedLabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="milesAwayLabel">
 							<string key="name">milesAwayLabel</string>

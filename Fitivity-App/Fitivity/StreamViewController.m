@@ -65,10 +65,19 @@
 		cell = [nib objectAtIndex:0];
     }
     
+    NSString *text = @"Basketball at YMCA";
+    NSMutableAttributedString *attrStr = [NSMutableAttributedString attributedStringWithString:text];
+    [attrStr setTextColor:[UIColor whiteColor]];
+    [attrStr setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+    
+    // now we change the color of the activity & location
+	[attrStr setTextColor:[UIColor blueColor] range:[text rangeOfString:@"Basketball"]];
+	[attrStr setTextColor:[UIColor yellowColor] range:[text rangeOfString:@"YMCA"]];
+    cell.activityLabel.attributedText = attrStr;
+    
     [cell.imageView setImage:[UIImage imageNamed:@"FeedCellActiveGroupActivityIconImage.png"]];
     [cell.timeLabel setText:@"3:45 PM"];
     [cell.titleLabel setText:@"6 people are doing"];
-    [cell.activityLabel setText:@"Basketball at YMCA"];
     [cell.milesAwayLabel setText:@"3.4 Miles"];
     
 //	PFObject *temp = [fetchedQueryItems objectAtIndex:indexPath.row];
