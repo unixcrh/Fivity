@@ -142,6 +142,11 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[textField resignFirstResponder];
+	
+	if ([textField isEqual:passwordField]) {
+		[self signIn:nil];
+	}
+	
 	return YES;
 }
 

@@ -154,6 +154,9 @@
 		6CDCD5D515B1B05400986AA2 /* ApplicationTabBarBackplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB4415AFB72500D21AA9 /* ApplicationTabBarBackplate.png */; };
 		6CDCD5D615B1B05400986AA2 /* ApplicationTabBarBackplate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7FB4515AFB72500D21AA9 /* ApplicationTabBarBackplate@2x.png */; };
 		6CEFED8015B3641500211CB0 /* ChooseActivityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEFED7F15B3641500211CB0 /* ChooseActivityHeaderView.m */; };
+		6CF2C70F15B4EAF9001E3353 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2C70C15B4EAF9001E3353 /* Icon.png */; };
+		6CF2C71015B4EAF9001E3353 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2C70D15B4EAF9001E3353 /* Icon@2x.png */; };
+		6CF2C71115B4EAF9001E3353 /* FitivityIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF2C70E15B4EAF9001E3353 /* FitivityIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -346,6 +349,9 @@
 		6CDCD5BA15B1AE9700986AA2 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserProfileViewController.xib; path = Fitivity/UserProfileViewController.xib; sourceTree = "<group>"; };
 		6CEFED7E15B3641500211CB0 /* ChooseActivityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseActivityHeaderView.h; sourceTree = "<group>"; };
 		6CEFED7F15B3641500211CB0 /* ChooseActivityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseActivityHeaderView.m; sourceTree = "<group>"; };
+		6CF2C70C15B4EAF9001E3353 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6CF2C70D15B4EAF9001E3353 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		6CF2C70E15B4EAF9001E3353 /* FitivityIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -684,6 +690,9 @@
 			isa = PBXGroup;
 			children = (
 				57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */,
+				6CF2C70C15B4EAF9001E3353 /* Icon.png */,
+				6CF2C70D15B4EAF9001E3353 /* Icon@2x.png */,
+				6CF2C70E15B4EAF9001E3353 /* FitivityIcon.png */,
 			);
 			name = Logos;
 			sourceTree = "<group>";
@@ -982,6 +991,9 @@
 				6C77230415B20F340040DB1D /* LocationCellIconImage@2x.png in Resources */,
 				6CA138D015B21C8600C1E1EC /* LocationMapViewController.xib in Resources */,
 				5700D1BA15B47107003C96F3 /* DiscoverCell.xib in Resources */,
+				6CF2C70F15B4EAF9001E3353 /* Icon.png in Resources */,
+				6CF2C71015B4EAF9001E3353 /* Icon@2x.png in Resources */,
+				6CF2C71115B4EAF9001E3353 /* FitivityIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1094,6 +1106,7 @@
 		6CB1A73A15ACFC1D00C0FF75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nathaniel Doe (GHBDY828ZW)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1103,6 +1116,7 @@
 				INFOPLIST_FILE = "Fitivity/Fitivity-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "963360E1-C545-4193-BE30-F7E84CCE4F64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1110,6 +1124,7 @@
 		6CB1A73B15ACFC1D00C0FF75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fitivity Inc./";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1119,6 +1134,7 @@
 				INFOPLIST_FILE = "Fitivity/Fitivity-Info.plist";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A1502AED-1EE3-4771-AE74-62388573BDE9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
