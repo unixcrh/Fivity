@@ -7,8 +7,11 @@
 //
 
 #import "ChooseActivityViewController.h"
+#import "ChooseActivityCell.h"
 
 #define kHeaderHeight	92
+#define kRowHeight		45
+#define kTagOffset		20
 
 @interface ChooseActivityViewController ()
 
@@ -16,7 +19,7 @@
 
 @implementation ChooseActivityViewController
 
-@synthesize activitiesTable;
+@synthesize activitiesTable, openSectionIndex;
 @synthesize delegate;
 
 #pragma mark - Helper Methods
@@ -89,13 +92,45 @@
         [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:i inSection:section]];
     }
 	
+	/*
+     Create an array containing the index paths of the rows to delete: These correspond to the rows for each quotation in the previously-open section, if there was one.
+     */
+    NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+	
+    NSInteger previousOpenSectionIndex = self.openSectionIndex;
+	
+    if (previousOpenSectionIndex != NSNotFound) {
+		
+		ChooseActivityHeaderView *previousOpenSection = (ChooseActivityHeaderView *)[self.activitiesTable viewWithTag:kTagOffset + previousOpenSectionIndex];
+		[previousOpenSection setSectionOpen:NO];
+        NSInteger countOfRowsToDelete = [(NSMutableArray *)[resultsToShow objectAtIndex:previousOpenSectionIndex] count];
+        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
+            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:previousOpenSectionIndex]];
+        }
+		[resultsToShow replaceObjectAtIndex:previousOpenSectionIndex withObject:[[NSMutableArray alloc] init]];
+    }
+
+	//Add the category to the results that will show
 	[resultsToShow replaceObjectAtIndex:section withObject:[categories objectAtIndex:section]];
 	[sectionHeaderView setSectionOpen:YES];
 	
-	UITableViewRowAnimation insertAnimation = UITableViewRowAnimationTop;
+	// Style the animation so that there's a smooth flow in either direction.
+    UITableViewRowAnimation insertAnimation;
+    UITableViewRowAnimation deleteAnimation;
+    if (previousOpenSectionIndex == NSNotFound || section < previousOpenSectionIndex) {
+        insertAnimation = UITableViewRowAnimationTop;
+        deleteAnimation = UITableViewRowAnimationBottom;
+    }
+    else {
+        insertAnimation = UITableViewRowAnimationBottom;
+        deleteAnimation = UITableViewRowAnimationTop;
+    }
+
 	[self.activitiesTable beginUpdates];
 	[self.activitiesTable insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:insertAnimation];
+	[self.activitiesTable deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:deleteAnimation];
 	[self.activitiesTable endUpdates];
+	self.openSectionIndex = section;
 }
 
 -(void)sectionHeaderView:(ChooseActivityHeaderView *)sectionHeaderView sectionClosed:(NSInteger)section {
@@ -112,25 +147,28 @@
         }
         [self.activitiesTable deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationTop];
     }
+	self.openSectionIndex = NSNotFound;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+	// Dequeue or create a cell of the appropriate type.
+	ChooseActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ChooseActivityCell" owner:self options:nil];
+		cell = [nib objectAtIndex:0];
     }
 	
 	PFObject *activity = [(NSMutableArray *)[categories objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-	cell.textLabel.text = [activity objectForKey:@"name"];
-	
+	cell.titleLabel.text = [activity objectForKey:@"name"];
+		
     return cell;
 }
 
-- (UIView*)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section { 
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section { 
 	NSString *title = @"";
 	if ([categories count] > 0) {
 		PFObject *firstObject = [(NSMutableArray *)[categories objectAtIndex:section] objectAtIndex:0];
@@ -141,7 +179,12 @@
 	ChooseActivityHeaderView *header = [[ChooseActivityHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.activitiesTable.bounds.size.width, kHeaderHeight) 
 																		title:title section:section];
 	[header setDelegate:self];
+	[header setTag:kTagOffset + section];
 	return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return kRowHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -177,6 +220,7 @@
     if (self) {
 		categories = [[NSMutableArray alloc] init];
 		resultsToShow = [[NSMutableArray alloc] init];
+		openSectionIndex = NSNotFound;
 		[self attemptQuery];
     }
     return self;

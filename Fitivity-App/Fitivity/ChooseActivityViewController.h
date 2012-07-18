@@ -25,6 +25,8 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *activitiesTable;
+@property (nonatomic, assign) NSInteger openSectionIndex;
+
 @property (nonatomic, assign) id <ChooseActivityViewControllerDelegate> delegate;
 
 @end

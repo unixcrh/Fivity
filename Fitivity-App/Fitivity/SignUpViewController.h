@@ -17,7 +17,7 @@
 	PFQuery *activeUserNameQuery;
 	PFQuery *activeEMailQuery;
 	
-	NSRegularExpression *userNameExpression;
+	NSRegularExpression *userNameExpression, *emailExpression;
 }
 
 - (IBAction)resignSignUp:(id)sender;
@@ -25,7 +25,7 @@
 - (IBAction)attemptSignUp:(id)sender;
 
 @property (nonatomic, assign) id<SignUpViewControllerDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *reenterPasswordField;

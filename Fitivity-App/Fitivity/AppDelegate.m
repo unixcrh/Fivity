@@ -23,18 +23,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setAutoresizesSubviews:YES];
     
+	//Set up parse credentials 
+	[Parse setApplicationId:[[FConfig instance] getParseAppID] clientKey:[[FConfig instance] getParseClientKey]];
+	[PFFacebookUtils initializeWithApplicationId:[[FConfig instance] getFacebookAppID]];
+	
 	//Initialize the main view controllers
 	self.openingView = [[OpeningLogoViewController alloc] initWithNibName:@"OpeningLogoViewController" bundle:nil];
 	StreamViewController *streamView = [[StreamViewController alloc] initWithNibName:@"StreamViewController" bundle:nil];
 	ActivityHomeViewController *activity = [[ActivityHomeViewController alloc] initWithNibName:@"ActivityHomeViewController" bundle:nil];
-	UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
+	UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil initWithUser:[PFUser currentUser]];
+	[profile setMainUser:YES];
 	self.tabBarView = [[FTabBarViewController alloc] initWithLeftRootViewController:streamView centerRootViewController:activity rightRootViewController:profile];
 	
 	[self.openingView setDelegate:self.tabBarView];
-	
-	//Set up parse credentials 
-	[Parse setApplicationId:[[FConfig instance] getParseAppID] clientKey:[[FConfig instance] getParseClientKey]];
-	[PFFacebookUtils initializeWithApplicationId:[[FConfig instance] getFacebookAppID]];
 	
 	self.window.rootViewController = self.tabBarView;
 	self.window.backgroundColor = [UIColor whiteColor];

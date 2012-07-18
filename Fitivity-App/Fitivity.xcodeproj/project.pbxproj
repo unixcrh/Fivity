@@ -11,8 +11,6 @@
 		5700D1BA15B47107003C96F3 /* DiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5700D1B915B47107003C96F3 /* DiscoverCell.xib */; };
 		575AECA415B6051200324958 /* GroupPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575AECA215B6051200324958 /* GroupPageViewController.m */; };
 		575AECA515B6051200324958 /* GroupPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575AECA315B6051200324958 /* GroupPageViewController.xib */; };
-		575AECA915B606FD00324958 /* ProposeActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575AECA715B606FD00324958 /* ProposeActivityViewController.m */; };
-		575AECAA15B606FD00324958 /* ProposeActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575AECA815B606FD00324958 /* ProposeActivityViewController.xib */; };
 		57AAB0C015AF441E00AD51CB /* FitivityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */; };
 		57AAB0C215AF4B1300AD51CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */; };
 		57E9C05615B5CA74007C7C58 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C05315B5CA6E007C7C58 /* NSAttributedString+Attributes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
@@ -39,6 +37,32 @@
 		6C08845A15B1C90A00670936 /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08845915B1C90A00670936 /* ChooseLocationViewController.m */; };
 		6C08845B15B1CF0900670936 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08845115B1C62F00670936 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc "; }; };
 		6C08845D15B1D3D300670936 /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */; };
+		6C50011B15B6311800029AFD /* ChooseActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50011A15B6311800029AFD /* ChooseActivityCell.m */; };
+		6C50011E15B6315300029AFD /* ChooseActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50011D15B6315300029AFD /* ChooseActivityCell.xib */; };
+		6C50012315B6369C00029AFD /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C50012215B6369C00029AFD /* ProfileCell.m */; };
+		6C50012515B636C800029AFD /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C50012415B636C800029AFD /* ProfileCell.xib */; };
+		6C50012B15B6379000029AFD /* LighterBlueBackplateTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50012715B6378A00029AFD /* LighterBlueBackplateTexture@2x.png */; };
+		6C50012C15B6379000029AFD /* LighterBlueBackplateTexturePushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50012815B6378C00029AFD /* LighterBlueBackplateTexturePushed.png */; };
+		6C50012D15B6379000029AFD /* LighterBlueBackplateTexturePushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50012915B6378E00029AFD /* LighterBlueBackplateTexturePushed@2x.png */; };
+		6C50013015B6379D00029AFD /* UserProfileSettingsWrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50012E15B6379C00029AFD /* UserProfileSettingsWrench.png */; };
+		6C50013115B6379D00029AFD /* UserProfileSettingsWrench@2x..png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50012F15B6379C00029AFD /* UserProfileSettingsWrench@2x..png */; };
+		6C50014215B637CC00029AFD /* UserSettingsNoButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013215B637C900029AFD /* UserSettingsNoButtonNormal.png */; };
+		6C50014315B637CC00029AFD /* UserSettingsNoButtonNormal@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013315B637C900029AFD /* UserSettingsNoButtonNormal@2.png */; };
+		6C50014415B637CC00029AFD /* UserSettingsNoButtonNormalPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013415B637C900029AFD /* UserSettingsNoButtonNormalPushed.png */; };
+		6C50014515B637CC00029AFD /* UserSettingsNoButtonNormalPushed@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013515B637C900029AFD /* UserSettingsNoButtonNormalPushed@2.png */; };
+		6C50014615B637CC00029AFD /* UserSettingsNoButtonNormalSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013615B637CA00029AFD /* UserSettingsNoButtonNormalSelected.png */; };
+		6C50014715B637CC00029AFD /* UserSettingsNoButtonNormalSelected@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013715B637CA00029AFD /* UserSettingsNoButtonNormalSelected@2.png */; };
+		6C50014815B637CC00029AFD /* UserSettingsNoButtonNormalSelectedPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013815B637CA00029AFD /* UserSettingsNoButtonNormalSelectedPushed.png */; };
+		6C50014915B637CC00029AFD /* UserSettingsNoButtonNormalSelectedPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013915B637CA00029AFD /* UserSettingsNoButtonNormalSelectedPushed@2x.png */; };
+		6C50014A15B637CC00029AFD /* UserSettingsYesButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013A15B637CA00029AFD /* UserSettingsYesButtonNormal.png */; };
+		6C50014B15B637CC00029AFD /* UserSettingsYesButtonNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013B15B637CA00029AFD /* UserSettingsYesButtonNormal@2x.png */; };
+		6C50014C15B637CC00029AFD /* UserSettingsYesButtonNormalPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013C15B637CA00029AFD /* UserSettingsYesButtonNormalPushed.png */; };
+		6C50014D15B637CC00029AFD /* UserSettingsYesButtonNormalPushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013D15B637CB00029AFD /* UserSettingsYesButtonNormalPushed@2x.png */; };
+		6C50014E15B637CC00029AFD /* UserSettingsYesButtonNormalSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013E15B637CB00029AFD /* UserSettingsYesButtonNormalSelected.png */; };
+		6C50014F15B637CC00029AFD /* UserSettingsYesButtonNormalSelected@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50013F15B637CB00029AFD /* UserSettingsYesButtonNormalSelected@2.png */; };
+		6C50015015B637CC00029AFD /* UserSettingsYesButtonNormalSelectedPushed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50014015B637CB00029AFD /* UserSettingsYesButtonNormalSelectedPushed.png */; };
+		6C50015115B637CC00029AFD /* UserSettingsYesButtonNormalSelectedPushed@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50014115B637CB00029AFD /* UserSettingsYesButtonNormalSelectedPushed@2.png */; };
+		6C50015315B637F500029AFD /* LighterBlueBackplateTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50015215B637F300029AFD /* LighterBlueBackplateTexture.png */; };
 		6C61768A15B0F24600E74B95 /* NSError+FITParseUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8665DA15AFB12B004D932F /* NSError+FITParseUtilities.m */; };
 		6C61768C15B0F24800E74B95 /* NSRegularExpression+FITUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD2F58815B0E77A0032FA34 /* NSRegularExpression+FITUtilities.m */; };
 		6C7722AF15B1EB670040DB1D /* ChooseActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */; };
@@ -55,10 +79,6 @@
 		6C7722C615B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722BC15B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png */; };
 		6C7722CA15B2096B0040DB1D /* ChooseLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7722C915B2096B0040DB1D /* ChooseLocationCell.m */; };
 		6C7722CD15B209900040DB1D /* ChooseLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722CC15B209900040DB1D /* ChooseLocationCell.xib */; };
-		6C7722D315B20BEF0040DB1D /* FitivityBackButtonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722CF15B20BEF0040DB1D /* FitivityBackButtonIcon.png */; };
-		6C7722D415B20BEF0040DB1D /* FitivityBackButtonIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722D015B20BEF0040DB1D /* FitivityBackButtonIcon@2x.png */; };
-		6C7722D515B20BEF0040DB1D /* FitivityBluePillNavBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722D115B20BEF0040DB1D /* FitivityBluePillNavBarIcon.png */; };
-		6C7722D615B20BEF0040DB1D /* FitivityBluePillNavBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722D215B20BEF0040DB1D /* FitivityBluePillNavBarIcon@2x.png */; };
 		6C7722E015B20C180040DB1D /* DarkerBlueBackplateTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722D815B20C130040DB1D /* DarkerBlueBackplateTexture@2x.png */; };
 		6C7722E215B20C180040DB1D /* DarkerBlueBackplateTexturePushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722DA15B20C140040DB1D /* DarkerBlueBackplateTexturePushed@2x.png */; };
 		6C7722E315B20C180040DB1D /* DarkerBlueShadowLower.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7722DB15B20C150040DB1D /* DarkerBlueShadowLower.png */; };
@@ -173,9 +193,6 @@
 		575AECA115B6051200324958 /* GroupPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupPageViewController.h; sourceTree = "<group>"; };
 		575AECA215B6051200324958 /* GroupPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupPageViewController.m; sourceTree = "<group>"; };
 		575AECA315B6051200324958 /* GroupPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupPageViewController.xib; path = Fitivity/GroupPageViewController.xib; sourceTree = "<group>"; };
-		575AECA615B606FD00324958 /* ProposeActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProposeActivityViewController.h; sourceTree = "<group>"; };
-		575AECA715B606FD00324958 /* ProposeActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProposeActivityViewController.m; sourceTree = "<group>"; };
-		575AECA815B606FD00324958 /* ProposeActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProposeActivityViewController.xib; path = Fitivity/ProposeActivityViewController.xib; sourceTree = "<group>"; };
 		57AAB0BF15AF441E00AD51CB /* FitivityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityLogo.png; sourceTree = "<group>"; };
 		57AAB0C115AF4B1300AD51CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		57E9C05215B5CA6E007C7C58 /* NSAttributedString+Attributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Attributes.h"; sourceTree = "<group>"; };
@@ -225,6 +242,34 @@
 		6C08845815B1C90A00670936 /* ChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
 		6C08845915B1C90A00670936 /* ChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
 		6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationViewController.xib; sourceTree = "<group>"; };
+		6C50011915B6311800029AFD /* ChooseActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseActivityCell.h; sourceTree = "<group>"; };
+		6C50011A15B6311800029AFD /* ChooseActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseActivityCell.m; sourceTree = "<group>"; };
+		6C50011D15B6315300029AFD /* ChooseActivityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseActivityCell.xib; sourceTree = "<group>"; };
+		6C50012115B6369C00029AFD /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
+		6C50012215B6369C00029AFD /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
+		6C50012415B636C800029AFD /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		6C50012715B6378A00029AFD /* LighterBlueBackplateTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LighterBlueBackplateTexture@2x.png"; sourceTree = "<group>"; };
+		6C50012815B6378C00029AFD /* LighterBlueBackplateTexturePushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LighterBlueBackplateTexturePushed.png; sourceTree = "<group>"; };
+		6C50012915B6378E00029AFD /* LighterBlueBackplateTexturePushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LighterBlueBackplateTexturePushed@2x.png"; sourceTree = "<group>"; };
+		6C50012E15B6379C00029AFD /* UserProfileSettingsWrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserProfileSettingsWrench.png; sourceTree = "<group>"; };
+		6C50012F15B6379C00029AFD /* UserProfileSettingsWrench@2x..png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserProfileSettingsWrench@2x..png"; sourceTree = "<group>"; };
+		6C50013215B637C900029AFD /* UserSettingsNoButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsNoButtonNormal.png; sourceTree = "<group>"; };
+		6C50013315B637C900029AFD /* UserSettingsNoButtonNormal@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsNoButtonNormal@2.png"; sourceTree = "<group>"; };
+		6C50013415B637C900029AFD /* UserSettingsNoButtonNormalPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsNoButtonNormalPushed.png; sourceTree = "<group>"; };
+		6C50013515B637C900029AFD /* UserSettingsNoButtonNormalPushed@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsNoButtonNormalPushed@2.png"; sourceTree = "<group>"; };
+		6C50013615B637CA00029AFD /* UserSettingsNoButtonNormalSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsNoButtonNormalSelected.png; sourceTree = "<group>"; };
+		6C50013715B637CA00029AFD /* UserSettingsNoButtonNormalSelected@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsNoButtonNormalSelected@2.png"; sourceTree = "<group>"; };
+		6C50013815B637CA00029AFD /* UserSettingsNoButtonNormalSelectedPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsNoButtonNormalSelectedPushed.png; sourceTree = "<group>"; };
+		6C50013915B637CA00029AFD /* UserSettingsNoButtonNormalSelectedPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsNoButtonNormalSelectedPushed@2x.png"; sourceTree = "<group>"; };
+		6C50013A15B637CA00029AFD /* UserSettingsYesButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsYesButtonNormal.png; sourceTree = "<group>"; };
+		6C50013B15B637CA00029AFD /* UserSettingsYesButtonNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsYesButtonNormal@2x.png"; sourceTree = "<group>"; };
+		6C50013C15B637CA00029AFD /* UserSettingsYesButtonNormalPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsYesButtonNormalPushed.png; sourceTree = "<group>"; };
+		6C50013D15B637CB00029AFD /* UserSettingsYesButtonNormalPushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsYesButtonNormalPushed@2x.png"; sourceTree = "<group>"; };
+		6C50013E15B637CB00029AFD /* UserSettingsYesButtonNormalSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsYesButtonNormalSelected.png; sourceTree = "<group>"; };
+		6C50013F15B637CB00029AFD /* UserSettingsYesButtonNormalSelected@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsYesButtonNormalSelected@2.png"; sourceTree = "<group>"; };
+		6C50014015B637CB00029AFD /* UserSettingsYesButtonNormalSelectedPushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSettingsYesButtonNormalSelectedPushed.png; sourceTree = "<group>"; };
+		6C50014115B637CB00029AFD /* UserSettingsYesButtonNormalSelectedPushed@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UserSettingsYesButtonNormalSelectedPushed@2.png"; sourceTree = "<group>"; };
+		6C50015215B637F300029AFD /* LighterBlueBackplateTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LighterBlueBackplateTexture.png; sourceTree = "<group>"; };
 		6C7722AC15B1EB670040DB1D /* ChooseActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseActivityViewController.h; sourceTree = "<group>"; };
 		6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseActivityViewController.m; sourceTree = "<group>"; };
 		6C7722AE15B1EB670040DB1D /* ChooseActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChooseActivityViewController.xib; path = Fitivity/ChooseActivityViewController.xib; sourceTree = "<group>"; };
@@ -241,10 +286,6 @@
 		6C7722C815B2096B0040DB1D /* ChooseLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationCell.h; sourceTree = "<group>"; };
 		6C7722C915B2096B0040DB1D /* ChooseLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationCell.m; sourceTree = "<group>"; };
 		6C7722CC15B209900040DB1D /* ChooseLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationCell.xib; sourceTree = "<group>"; };
-		6C7722CF15B20BEF0040DB1D /* FitivityBackButtonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityBackButtonIcon.png; sourceTree = "<group>"; };
-		6C7722D015B20BEF0040DB1D /* FitivityBackButtonIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitivityBackButtonIcon@2x.png"; sourceTree = "<group>"; };
-		6C7722D115B20BEF0040DB1D /* FitivityBluePillNavBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FitivityBluePillNavBarIcon.png; sourceTree = "<group>"; };
-		6C7722D215B20BEF0040DB1D /* FitivityBluePillNavBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FitivityBluePillNavBarIcon@2x.png"; sourceTree = "<group>"; };
 		6C7722D815B20C130040DB1D /* DarkerBlueBackplateTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkerBlueBackplateTexture@2x.png"; sourceTree = "<group>"; };
 		6C7722DA15B20C140040DB1D /* DarkerBlueBackplateTexturePushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DarkerBlueBackplateTexturePushed@2x.png"; sourceTree = "<group>"; };
 		6C7722DB15B20C150040DB1D /* DarkerBlueShadowLower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkerBlueShadowLower.png; sourceTree = "<group>"; };
@@ -503,6 +544,23 @@
 			name = GTM;
 			sourceTree = "<group>";
 		};
+		6C50011F15B6368500029AFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C50012415B636C800029AFD /* ProfileCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		6C50012015B6368900029AFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C50012115B6369C00029AFD /* ProfileCell.h */,
+				6C50012215B6369C00029AFD /* ProfileCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		6C7722B215B1F1460040DB1D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +582,10 @@
 				6C7722DC15B20C160040DB1D /* DarkerBlueShadowLower@2x.png */,
 				6C7722DD15B20C160040DB1D /* DarkerBlueShadowUpper.png */,
 				6C7722DE15B20C170040DB1D /* DarkerBlueShadowUpper@2x.png */,
+				6C50015215B637F300029AFD /* LighterBlueBackplateTexture.png */,
+				6C50012715B6378A00029AFD /* LighterBlueBackplateTexture@2x.png */,
+				6C50012815B6378C00029AFD /* LighterBlueBackplateTexturePushed.png */,
+				6C50012915B6378E00029AFD /* LighterBlueBackplateTexturePushed@2x.png */,
 				6C7722B315B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage.png */,
 				6C7722B415B1F14D0040DB1D /* FeedCellActiveGroupActivityIconImage@2x.png */,
 				6C7722B515B1F14D0040DB1D /* FeedCellIconImageBackplate.png */,
@@ -545,6 +607,8 @@
 				6C7722C915B2096B0040DB1D /* ChooseLocationCell.m */,
 				6CEFED7E15B3641500211CB0 /* ChooseActivityHeaderView.h */,
 				6CEFED7F15B3641500211CB0 /* ChooseActivityHeaderView.m */,
+				6C50011915B6311800029AFD /* ChooseActivityCell.h */,
+				6C50011A15B6311800029AFD /* ChooseActivityCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -553,6 +617,7 @@
 			isa = PBXGroup;
 			children = (
 				6C7722CC15B209900040DB1D /* ChooseLocationCell.xib */,
+				6C50011D15B6315300029AFD /* ChooseActivityCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -560,10 +625,6 @@
 		6C7722CE15B20BD80040DB1D /* Navigation Bar */ = {
 			isa = PBXGroup;
 			children = (
-				6C7722CF15B20BEF0040DB1D /* FitivityBackButtonIcon.png */,
-				6C7722D015B20BEF0040DB1D /* FitivityBackButtonIcon@2x.png */,
-				6C7722D115B20BEF0040DB1D /* FitivityBluePillNavBarIcon.png */,
-				6C7722D215B20BEF0040DB1D /* FitivityBluePillNavBarIcon@2x.png */,
 				6C8665AB15AFA5D3004D932F /* NavigationBarBackplate.png */,
 				6C8665AC15AFA5D3004D932F /* NavigationBarBackplate@2x.png */,
 				6CC7FB0F15AFB62C00D21AA9 /* BackButtonIcon.png */,
@@ -762,6 +823,24 @@
 		6CC7FB1815AFB67600D21AA9 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				6C50013215B637C900029AFD /* UserSettingsNoButtonNormal.png */,
+				6C50013315B637C900029AFD /* UserSettingsNoButtonNormal@2.png */,
+				6C50013415B637C900029AFD /* UserSettingsNoButtonNormalPushed.png */,
+				6C50013515B637C900029AFD /* UserSettingsNoButtonNormalPushed@2.png */,
+				6C50013615B637CA00029AFD /* UserSettingsNoButtonNormalSelected.png */,
+				6C50013715B637CA00029AFD /* UserSettingsNoButtonNormalSelected@2.png */,
+				6C50013815B637CA00029AFD /* UserSettingsNoButtonNormalSelectedPushed.png */,
+				6C50013915B637CA00029AFD /* UserSettingsNoButtonNormalSelectedPushed@2x.png */,
+				6C50013A15B637CA00029AFD /* UserSettingsYesButtonNormal.png */,
+				6C50013B15B637CA00029AFD /* UserSettingsYesButtonNormal@2x.png */,
+				6C50013C15B637CA00029AFD /* UserSettingsYesButtonNormalPushed.png */,
+				6C50013D15B637CB00029AFD /* UserSettingsYesButtonNormalPushed@2x.png */,
+				6C50013E15B637CB00029AFD /* UserSettingsYesButtonNormalSelected.png */,
+				6C50013F15B637CB00029AFD /* UserSettingsYesButtonNormalSelected@2.png */,
+				6C50014015B637CB00029AFD /* UserSettingsYesButtonNormalSelectedPushed.png */,
+				6C50014115B637CB00029AFD /* UserSettingsYesButtonNormalSelectedPushed@2.png */,
+				6C50012E15B6379C00029AFD /* UserProfileSettingsWrench.png */,
+				6C50012F15B6379C00029AFD /* UserProfileSettingsWrench@2x..png */,
 				6CC7FB1915AFB67D00D21AA9 /* ChooseActivityChooseActivity.png */,
 				6CC7FB1A15AFB67D00D21AA9 /* ChooseActivityChooseActivity@2x.png */,
 				6CC7FB1B15AFB67D00D21AA9 /* ChooseActivityChooseActivityPushed.png */,
@@ -825,8 +904,6 @@
 				5700D1B315B470A7003C96F3 /* Cells */,
 				6CA2691C15AE2FB900CD205C /* StreamViewController.h */,
 				6CA2691D15AE2FB900CD205C /* StreamViewController.m */,
-				575AECA115B6051200324958 /* GroupPageViewController.h */,
-				575AECA215B6051200324958 /* GroupPageViewController.m */,
 			);
 			name = "Discover Stream";
 			sourceTree = "<group>";
@@ -842,8 +919,8 @@
 				6C08845915B1C90A00670936 /* ChooseLocationViewController.m */,
 				6C7722AC15B1EB670040DB1D /* ChooseActivityViewController.h */,
 				6C7722AD15B1EB670040DB1D /* ChooseActivityViewController.m */,
-				575AECA615B606FD00324958 /* ProposeActivityViewController.h */,
-				575AECA715B606FD00324958 /* ProposeActivityViewController.m */,
+				575AECA115B6051200324958 /* GroupPageViewController.h */,
+				575AECA215B6051200324958 /* GroupPageViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -851,6 +928,7 @@
 		6CDCD5AF15B1ADA500986AA2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				6C50012015B6368900029AFD /* Cells */,
 				6CDCD5B815B1AE9700986AA2 /* UserProfileViewController.h */,
 				6CDCD5B915B1AE9700986AA2 /* UserProfileViewController.m */,
 			);
@@ -860,6 +938,7 @@
 		6CDCD5B015B1ADB500986AA2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				6C50011F15B6368500029AFD /* Cells */,
 				6CDCD5BA15B1AE9700986AA2 /* UserProfileViewController.xib */,
 			);
 			name = Profile;
@@ -873,7 +952,7 @@
 				6C08845C15B1D3D300670936 /* ChooseLocationViewController.xib */,
 				6C7722AE15B1EB670040DB1D /* ChooseActivityViewController.xib */,
 				6CA138CE15B21C8600C1E1EC /* LocationMapViewController.xib */,
-				575AECA815B606FD00324958 /* ProposeActivityViewController.xib */,
+				575AECA315B6051200324958 /* GroupPageViewController.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -883,7 +962,6 @@
 			children = (
 				5700D1B815B470F7003C96F3 /* Cells */,
 				6CA2691E15AE2FB900CD205C /* StreamViewController.xib */,
-				575AECA315B6051200324958 /* GroupPageViewController.xib */,
 			);
 			name = "Discover Stream";
 			sourceTree = "<group>";
@@ -1013,10 +1091,6 @@
 				6C7722C515B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator.png in Resources */,
 				6C7722C615B1F14D0040DB1D /* FeedCellWhiteDisclosureIndicator@2.png in Resources */,
 				6C7722CD15B209900040DB1D /* ChooseLocationCell.xib in Resources */,
-				6C7722D315B20BEF0040DB1D /* FitivityBackButtonIcon.png in Resources */,
-				6C7722D415B20BEF0040DB1D /* FitivityBackButtonIcon@2x.png in Resources */,
-				6C7722D515B20BEF0040DB1D /* FitivityBluePillNavBarIcon.png in Resources */,
-				6C7722D615B20BEF0040DB1D /* FitivityBluePillNavBarIcon@2x.png in Resources */,
 				6C7722E015B20C180040DB1D /* DarkerBlueBackplateTexture@2x.png in Resources */,
 				6C7722E215B20C180040DB1D /* DarkerBlueBackplateTexturePushed@2x.png in Resources */,
 				6C7722E315B20C180040DB1D /* DarkerBlueShadowLower.png in Resources */,
@@ -1041,7 +1115,30 @@
 				6CF2C71015B4EAF9001E3353 /* Icon@2x.png in Resources */,
 				6CF2C71115B4EAF9001E3353 /* FitivityIcon.png in Resources */,
 				575AECA515B6051200324958 /* GroupPageViewController.xib in Resources */,
-				575AECAA15B606FD00324958 /* ProposeActivityViewController.xib in Resources */,
+				6C50011E15B6315300029AFD /* ChooseActivityCell.xib in Resources */,
+				6C50012515B636C800029AFD /* ProfileCell.xib in Resources */,
+				6C50012B15B6379000029AFD /* LighterBlueBackplateTexture@2x.png in Resources */,
+				6C50012C15B6379000029AFD /* LighterBlueBackplateTexturePushed.png in Resources */,
+				6C50012D15B6379000029AFD /* LighterBlueBackplateTexturePushed@2x.png in Resources */,
+				6C50013015B6379D00029AFD /* UserProfileSettingsWrench.png in Resources */,
+				6C50013115B6379D00029AFD /* UserProfileSettingsWrench@2x..png in Resources */,
+				6C50014215B637CC00029AFD /* UserSettingsNoButtonNormal.png in Resources */,
+				6C50014315B637CC00029AFD /* UserSettingsNoButtonNormal@2.png in Resources */,
+				6C50014415B637CC00029AFD /* UserSettingsNoButtonNormalPushed.png in Resources */,
+				6C50014515B637CC00029AFD /* UserSettingsNoButtonNormalPushed@2.png in Resources */,
+				6C50014615B637CC00029AFD /* UserSettingsNoButtonNormalSelected.png in Resources */,
+				6C50014715B637CC00029AFD /* UserSettingsNoButtonNormalSelected@2.png in Resources */,
+				6C50014815B637CC00029AFD /* UserSettingsNoButtonNormalSelectedPushed.png in Resources */,
+				6C50014915B637CC00029AFD /* UserSettingsNoButtonNormalSelectedPushed@2x.png in Resources */,
+				6C50014A15B637CC00029AFD /* UserSettingsYesButtonNormal.png in Resources */,
+				6C50014B15B637CC00029AFD /* UserSettingsYesButtonNormal@2x.png in Resources */,
+				6C50014C15B637CC00029AFD /* UserSettingsYesButtonNormalPushed.png in Resources */,
+				6C50014D15B637CC00029AFD /* UserSettingsYesButtonNormalPushed@2x.png in Resources */,
+				6C50014E15B637CC00029AFD /* UserSettingsYesButtonNormalSelected.png in Resources */,
+				6C50014F15B637CC00029AFD /* UserSettingsYesButtonNormalSelected@2.png in Resources */,
+				6C50015015B637CC00029AFD /* UserSettingsYesButtonNormalSelectedPushed.png in Resources */,
+				6C50015115B637CC00029AFD /* UserSettingsYesButtonNormalSelectedPushed@2.png in Resources */,
+				6C50015315B637F500029AFD /* LighterBlueBackplateTexture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,7 +1189,8 @@
 				6CEFED8015B3641500211CB0 /* ChooseActivityHeaderView.m in Sources */,
 				5700D1B715B470D4003C96F3 /* DiscoverCell.m in Sources */,
 				575AECA415B6051200324958 /* GroupPageViewController.m in Sources */,
-				575AECA915B606FD00324958 /* ProposeActivityViewController.m in Sources */,
+				6C50011B15B6311800029AFD /* ChooseActivityCell.m in Sources */,
+				6C50012315B6369C00029AFD /* ProfileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
